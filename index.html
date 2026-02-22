@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BartAI — Solutions IA Sur Mesure pour Entreprises</title>
+    <meta name="description" content="BartAI conçoit et déploie des solutions d'intelligence artificielle sur mesure pour les PME et ETI. Automatisation, ventes, chatbots, stratégie data.">
+    <meta property="og:title" content="BartAI — Bespoke AI Solutions for Enterprise">
+    <meta property="og:description" content="We design and deploy tailored AI systems that streamline workflows, accelerate sales, and unlock growth.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mcbart.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #faf8f4;
+            --bg2: #f2efe8;
+            --bg3: #eae5db;
+            --dark: #1a1714;
+            --dark2: #2c2822;
+            --text: #3a352d;
+            --text2: #7a7468;
+            --accent: #b8860b;
+            --accent2: #9a7209;
+            --accent-soft: rgba(184,134,11,0.08);
+            --accent-med: rgba(184,134,11,0.15);
+            --white: #fff;
+            --border: rgba(26,23,20,0.08);
+            --border2: rgba(26,23,20,0.12);
+            --r: 8px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+            --shadow-lg: 0 4px 12px rgba(0,0,0,0.05), 0 24px 64px rgba(0,0,0,0.1);
+        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;font-size:16px}
+        body{font-family:'Libre Franklin',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+        ::selection{background:var(--accent);color:var(--white)}
+        .container{max-width:1140px;margin:0 auto;padding:0 2rem}
+
+        /* ===== TYPOGRAPHY ===== */
+        h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif}
+
+        /* ===== NAV ===== */
+        nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 2.5rem;height:72px;display:flex;justify-content:space-between;align-items:center;background:rgba(250,248,244,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:all .35s}
+        nav.scrolled{box-shadow:0 1px 12px rgba(0,0,0,0.06)}
+        .logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--dark)}
+        .logo-mark{width:36px;height:36px;background:var(--dark);border-radius:6px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+        .logo-mark::after{content:'';position:absolute;top:4px;right:4px;width:10px;height:10px;border:2px solid var(--accent);border-radius:50%;animation:logoPulse 3s ease-in-out infinite}
+        @keyframes logoPulse{0%,100%{opacity:.4;transform:scale(.8)}50%{opacity:1;transform:scale(1)}}
+        .logo-mark span{color:var(--bg);font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.1rem;letter-spacing:-.02em;position:relative;z-index:1}
+        .logo-text{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;letter-spacing:.01em}
+        .logo-text em{font-style:normal;color:var(--accent);font-weight:700}
+        .nav-right{display:flex;align-items:center;gap:2rem}
+        .nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
+        .nav-links a{color:var(--text2);text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:color .3s;position:relative}
+        .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--accent);transition:width .3s}
+        .nav-links a:hover{color:var(--dark)}
+        .nav-links a:hover::after{width:100%}
+        .lang-switch{display:flex;border:1px solid var(--border2);border-radius:5px;overflow:hidden}
+        .lang-btn{background:transparent;border:none;color:var(--text2);padding:.3rem .55rem;font-size:.7rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:'Libre Franklin',sans-serif;letter-spacing:.06em}
+        .lang-btn.active{background:var(--dark);color:var(--bg)}
+        .lang-btn:hover:not(.active){background:var(--bg2)}
+        .nav-cta-btn{background:var(--dark);color:var(--bg);padding:.55rem 1.3rem;border-radius:5px;text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:all .3s;display:inline-flex;align-items:center;gap:.4rem}
+        .nav-cta-btn:hover{background:var(--accent);transform:translateY(-1px)}
+        .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:5px}
+        .menu-toggle span{display:block;width:20px;height:1.5px;background:var(--dark);transition:all .3s}
+
+        /* ===== HERO ===== */
+        .hero{min-height:100vh;display:flex;align-items:center;padding:10rem 2.5rem 6rem;position:relative;overflow:hidden}
+        .hero::before{content:'';position:absolute;top:0;right:0;width:55%;height:100%;background:linear-gradient(135deg,transparent 30%,var(--bg2) 70%,var(--bg3));pointer-events:none;clip-path:polygon(25% 0,100% 0,100% 100%,0 100%)}
+        .hero::after{content:'';position:absolute;top:15%;right:10%;width:300px;height:300px;border:1px solid var(--accent-med);border-radius:50%;animation:heroOrb 20s linear infinite;pointer-events:none}
+        @keyframes heroOrb{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+        .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1140px;margin:0 auto;width:100%;position:relative;z-index:2}
+        .hero-left{max-width:560px}
+        .hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem}
+        .hero-eyebrow::before{content:'';width:28px;height:1.5px;background:var(--accent)}
+        .hero h1{font-size:clamp(2.6rem,5.5vw,4.2rem);font-weight:500;line-height:1.12;color:var(--dark);margin-bottom:1.5rem;letter-spacing:-.02em}
+        .hero h1 em{font-style:italic;color:var(--accent);font-weight:500}
+        .hero-desc{font-size:1.05rem;color:var(--text2);line-height:1.75;margin-bottom:2.5rem;font-weight:300;max-width:480px}
+        .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+        .btn{padding:.9rem 2rem;border-radius:5px;text-decoration:none;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:all .35s;display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;border:none}
+        .btn-dark{background:var(--dark);color:var(--bg)}
+        .btn-dark:hover{background:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(184,134,11,0.2)}
+        .btn-outline{background:transparent;color:var(--dark);border:1.5px solid var(--border2)}
+        .btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+        .hero-right{position:relative;display:flex;justify-content:center}
+        .hero-visual{position:relative;width:100%;max-width:440px}
+        .hero-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:2rem;box-shadow:var(--shadow-lg);position:relative}
+        .hero-card-label{font-size:.65rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem}
+        .hero-metric{display:flex;align-items:baseline;gap:.5rem;margin-bottom:.5rem}
+        .hero-metric-num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:700;color:var(--dark);line-height:1}
+        .hero-metric-unit{font-size:.85rem;color:var(--accent);font-weight:600}
+        .hero-metric-desc{font-size:.82rem;color:var(--text2);font-weight:300;margin-bottom:1.5rem}
+        .hero-bars{display:flex;flex-direction:column;gap:.6rem}
+        .hero-bar{height:6px;border-radius:3px;background:var(--bg2);overflow:hidden;position:relative}
+        .hero-bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));animation:barGrow 2s ease-out forwards;transform-origin:left;transform:scaleX(0)}
+        @keyframes barGrow{to{transform:scaleX(1)}}
+        .hero-bar:nth-child(1) .hero-bar-fill{width:92%}
+        .hero-bar:nth-child(2) .hero-bar-fill{width:78%;animation-delay:.2s}
+        .hero-bar:nth-child(3) .hero-bar-fill{width:85%;animation-delay:.4s}
+        .hero-float-card{position:absolute;top:-20px;right:-30px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:.8rem 1.1rem;box-shadow:var(--shadow);display:flex;align-items:center;gap:.6rem;animation:float 4s ease-in-out infinite}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+        .hero-float-dot{width:8px;height:8px;background:#22c55e;border-radius:50%}
+        .hero-float-text{font-size:.72rem;font-weight:600;color:var(--dark)}
+
+        /* ===== STATS BAR ===== */
+        .stats-bar{padding:3.5rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--white)}
+        .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+        .stat{text-align:center}
+        .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--dark);line-height:1.1}
+        .stat-num span{color:var(--accent)}
+        .stat-label{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text2);margin-top:.3rem}
+
+        /* ===== SECTION COMMONS ===== */
+        section{padding:6.5rem 0}
+        .sec-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+        .sec-eyebrow::before{content:'';width:20px;height:1.5px;background:var(--accent)}
+        .sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.8vw,2.8rem);font-weight:500;color:var(--dark);line-height:1.15;margin-bottom:.8rem;letter-spacing:-.01em}
+        .sec-sub{color:var(--text2);font-size:1rem;max-width:540px;font-weight:300;line-height:1.75}
+
+        /* ===== SERVICES ===== */
+        .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+        .svc{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:2rem;transition:all .4s;position:relative;overflow:hidden}
+        .svc::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .4s;transform-origin:left}
+        .svc:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--accent-med)}
+        .svc:hover::before{transform:scaleX(1)}
+        .svc-icon{width:44px;height:44px;background:var(--accent-soft);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1.3rem;font-size:1.2rem;transition:all .4s}
+        .svc:hover .svc-icon{background:var(--accent);color:var(--white);transform:scale(1.05)}
+        .svc h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--dark);margin-bottom:.6rem}
+        .svc p{font-size:.85rem;color:var(--text2);line-height:1.65;font-weight:300}
+
+        /* ===== RESULTS ===== */
+        .results{background:var(--dark);color:var(--bg);overflow:hidden;position:relative}
+        .results::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(184,134,11,0.12),transparent 65%);border-radius:50%;pointer-events:none}
+        .results .sec-eyebrow{color:var(--accent)}
+        .results .sec-title{color:var(--bg)}
+        .results .sec-sub{color:rgba(250,248,244,0.6)}
+        .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+        .result-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r);padding:2rem;transition:all .4s}
+        .result-card:hover{background:rgba(255,255,255,0.07);border-color:rgba(184,134,11,0.25);transform:translateY(-2px)}
+        .result-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:.4rem}
+        .result-label{font-size:.85rem;color:rgba(250,248,244,0.8);font-weight:400;margin-bottom:.8rem}
+        .result-desc{font-size:.78rem;color:rgba(250,248,244,0.45);line-height:1.6;font-weight:300}
+
+        /* ===== PROCESS ===== */
+        .process{background:var(--bg2)}
+        .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:3rem;position:relative}
+        .process-steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:var(--border2)}
+        .pstep{text-align:center;padding:0 1.2rem;position:relative}
+        .pstep-num{width:56px;height:56px;border-radius:50%;background:var(--white);border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--accent);margin:0 auto 1.5rem;position:relative;z-index:2;transition:all .4s}
+        .pstep:hover .pstep-num{background:var(--accent);color:var(--white);border-color:var(--accent);transform:scale(1.1)}
+        .pstep h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--dark);margin-bottom:.5rem}
+        .pstep p{font-size:.82rem;color:var(--text2);line-height:1.6;font-weight:300}
+
+        /* ===== PRICING ===== */
+        .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+        .price-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:2.2rem;transition:all .4s;position:relative}
+        .price-card.featured{border-color:var(--accent);box-shadow:var(--shadow-lg)}
+        .price-card.featured::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);border-radius:var(--r) var(--r) 0 0}
+        .price-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+        .price-badge{display:inline-block;background:var(--accent);color:var(--white);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .65rem;border-radius:3px;margin-bottom:1rem}
+        .price-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--dark);margin-bottom:.4rem}
+        .price-desc{font-size:.82rem;color:var(--text2);line-height:1.6;font-weight:300;margin-bottom:1.5rem;min-height:48px}
+        .price-amount{display:flex;align-items:baseline;gap:.3rem;margin-bottom:.3rem}
+        .price-from{font-size:.75rem;color:var(--text2);font-weight:400}
+        .price-val{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:var(--dark);line-height:1}
+        .price-unit{font-size:.8rem;color:var(--text2);font-weight:400}
+        .price-note{font-size:.72rem;color:var(--text2);margin-bottom:1.5rem;font-weight:300}
+        .price-features{list-style:none;margin-bottom:1.8rem;display:flex;flex-direction:column;gap:.55rem}
+        .price-features li{font-size:.82rem;color:var(--text);font-weight:400;display:flex;align-items:flex-start;gap:.5rem;line-height:1.5}
+        .price-features li::before{content:'✓';color:var(--accent);font-weight:700;font-size:.75rem;margin-top:.15rem;flex-shrink:0}
+        .price-cta{width:100%;padding:.75rem;border-radius:5px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .3s;text-align:center;text-decoration:none;display:block;font-family:'Libre Franklin',sans-serif}
+        .price-cta-dark{background:var(--dark);color:var(--bg);border:none}
+        .price-cta-dark:hover{background:var(--accent)}
+        .price-cta-outline{background:transparent;color:var(--dark);border:1.5px solid var(--border2)}
+        .price-cta-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+        /* Popular solutions */
+        .popular{margin-top:2.5rem}
+        .popular-title{font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--text2);margin-bottom:1.2rem}
+        .popular-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+        .pop-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:1.3rem;transition:all .3s}
+        .pop-card:hover{border-color:var(--accent-med);background:var(--white)}
+        .pop-card h4{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:.3rem}
+        .pop-price{font-size:.82rem;color:var(--accent);font-weight:600;margin-bottom:.3rem}
+        .pop-card p{font-size:.75rem;color:var(--text2);line-height:1.5;font-weight:300}
+        .pricing-note{text-align:center;margin-top:2rem;font-size:.78rem;color:var(--text2);font-weight:300;font-style:italic}
+
+        /* ===== CTA ===== */
+        .cta-section{text-align:center;position:relative;overflow:hidden}
+        .cta-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border:1px solid var(--accent-med);border-radius:50%;pointer-events:none;animation:ctaPulse 6s ease-in-out infinite}
+        @keyframes ctaPulse{0%,100%{opacity:.3;transform:translate(-50%,-50%) scale(.9)}50%{opacity:.8;transform:translate(-50%,-50%) scale(1.05)}}
+        .cta-section .sec-title{max-width:600px;margin:0 auto .8rem}
+        .cta-section .sec-sub{max-width:480px;margin:0 auto 2.5rem}
+
+        /* ===== CONTACT ===== */
+        .contact{background:var(--white)}
+        .contact-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;margin-top:3rem}
+        .contact-info{display:flex;flex-direction:column;gap:1.8rem}
+        .ci{display:flex;gap:1rem}
+        .ci-icon{width:40px;height:40px;background:var(--accent-soft);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+        .ci h4{font-size:.88rem;font-weight:600;color:var(--dark);margin-bottom:.15rem}
+        .ci p{font-size:.82rem;color:var(--text2);font-weight:300}
+        .ci a{color:var(--accent);text-decoration:none;font-weight:500;transition:color .3s}
+        .ci a:hover{color:var(--accent2)}
+        .contact-form{display:flex;flex-direction:column;gap:.9rem}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+        .contact-form input,.contact-form textarea,.contact-form select{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:.8rem 1rem;color:var(--dark);font-family:'Libre Franklin',sans-serif;font-size:.85rem;font-weight:300;transition:all .3s}
+        .contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--text2)}
+        .contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+        .contact-form textarea{resize:vertical;min-height:110px}
+        .contact-form select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237a7468' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+        .contact-form select option{background:var(--white);color:var(--dark)}
+
+        /* ===== FOOTER ===== */
+        footer{padding:2.5rem 0;border-top:1px solid var(--border)}
+        .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+        .footer-copy{font-size:.78rem;color:var(--text2);font-weight:300}
+        .footer-links{display:flex;gap:1.5rem}
+        .footer-links a{font-size:.78rem;color:var(--text2);text-decoration:none;font-weight:400;transition:color .3s}
+        .footer-links a:hover{color:var(--accent)}
+
+        /* ===== ANIMATIONS ===== */
+        .reveal{opacity:0;transform:translateY(24px);transition:all .65s cubic-bezier(.22,1,.36,1)}
+        .reveal.vis{opacity:1;transform:translateY(0)}
+        .reveal-d1{transition-delay:.1s}
+        .reveal-d2{transition-delay:.2s}
+        .reveal-d3{transition-delay:.3s}
+
+        /* ===== RESPONSIVE ===== */
+        @media(max-width:1024px){
+            .hero-inner{grid-template-columns:1fr;gap:3rem}
+            .hero-right{display:none}
+            .services-grid,.results-grid,.pricing-grid,.popular-grid{grid-template-columns:repeat(2,1fr)}
+            .process-steps{grid-template-columns:repeat(2,1fr);gap:2rem}
+            .process-steps::before{display:none}
+        }
+        @media(max-width:640px){
+            nav{padding:0 1.5rem}
+            .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--bg);flex-direction:column;padding:1.5rem;gap:1rem;border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+            .nav-links.open{display:flex}
+            .nav-cta-btn{display:none}
+            .menu-toggle{display:flex}
+            .hero{padding:7rem 1.5rem 3rem}
+            .container{padding:0 1.5rem}
+            .services-grid,.results-grid,.pricing-grid,.popular-grid,.process-steps{grid-template-columns:1fr}
+            .stats-grid{grid-template-columns:repeat(2,1fr);gap:1.5rem}
+            .contact-layout{grid-template-columns:1fr}
+            .form-row{grid-template-columns:1fr}
+            .hero-actions{flex-direction:column;width:100%}
+            .hero-actions .btn{width:100%;justify-content:center}
+            .footer-inner{flex-direction:column;text-align:center}
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+    <a href="#" class="logo">
+        <div class="logo-mark"><span>B</span></div>
+        <div class="logo-text">Bart<em>AI</em></div>
+    </a>
+    <div class="nav-right">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#results" data-i18n="nav.results">Résultats</a></li>
+            <li><a href="#pricing" data-i18n="nav.pricing">Tarifs</a></li>
+            <li><a href="#process" data-i18n="nav.process">Processus</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="lang-switch">
+            <button class="lang-btn" onclick="setLang('en')">EN</button>
+            <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+            <button class="lang-btn" onclick="setLang('it')">IT</button>
+        </div>
+        <a href="#contact" class="nav-cta-btn" data-i18n="nav.cta">Commencer →</a>
+        <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-left">
+            <div class="hero-eyebrow" data-i18n="hero.eyebrow">Conseil en Intelligence Artificielle</div>
+            <h1 data-i18n="hero.title">L'IA sur mesure qui <em>transforme</em> votre entreprise</h1>
+            <p class="hero-desc" data-i18n="hero.desc">Nous concevons et déployons des solutions d'IA concrètes qui automatisent vos processus, accélèrent vos ventes et libèrent la croissance — conçues spécifiquement pour votre activité.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-dark" data-i18n="hero.cta1">Réserver un appel découverte →</a>
+                <a href="#services" class="btn btn-outline" data-i18n="hero.cta2">Voir nos services</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-card-label" data-i18n="hero.card.label">IMPACT CLIENT MOYEN</div>
+                    <div class="hero-metric">
+                        <div class="hero-metric-num">780</div>
+                        <div class="hero-metric-unit">% ROI</div>
+                    </div>
+                    <div class="hero-metric-desc" data-i18n="hero.card.desc">Retour sur investissement moyen constaté</div>
+                    <div class="hero-bars">
+                        <div class="hero-bar"><div class="hero-bar-fill"></div></div>
+                        <div class="hero-bar"><div class="hero-bar-fill"></div></div>
+                        <div class="hero-bar"><div class="hero-bar-fill"></div></div>
+                    </div>
+                </div>
+                <div class="hero-float-card">
+                    <div class="hero-float-dot"></div>
+                    <div class="hero-float-text" data-i18n="hero.float">+768h économisées/an</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat reveal"><div class="stat-num">768<span>+</span></div><div class="stat-label" data-i18n="stats.hours">Heures Économisées</div></div>
+            <div class="stat reveal reveal-d1"><div class="stat-num">780<span>%</span></div><div class="stat-label" data-i18n="stats.roi">Retour sur Investissement</div></div>
+            <div class="stat reveal reveal-d2"><div class="stat-num">100<span>%</span></div><div class="stat-label" data-i18n="stats.bespoke">Solutions Sur Mesure</div></div>
+            <div class="stat reveal reveal-d3"><div class="stat-num">3</div><div class="stat-label" data-i18n="stats.lang">Langues : EN · FR · IT</div></div>
+        </div>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+    <div class="container">
+        <div class="reveal">
+            <div class="sec-eyebrow" data-i18n="svc.label">Nos Services</div>
+            <div class="sec-title" data-i18n="svc.title">Des cas d'usage IA à fort impact</div>
+            <div class="sec-sub" data-i18n="svc.sub">Nos consultants rendent l'IA accessible à votre entreprise — plus agile, plus rentable, plus compétitive.</div>
+        </div>
+        <div class="services-grid">
+            <div class="svc reveal"><div class="svc-icon">⚡</div><h3 data-i18n="svc.1.t">Automatisation des Processus</h3><p data-i18n="svc.1.d">Éliminez les tâches manuelles. Nous cartographions vos opérations et déployons des agents IA qui gèrent le répétitif — saisie, traitement de documents, workflows — économisant des centaines d'heures par mois.</p></div>
+            <div class="svc reveal reveal-d1"><div class="svc-icon">📈</div><h3 data-i18n="svc.2.t">Intelligence Commerciale</h3><p data-i18n="svc.2.d">Scoring de leads par IA, prospection automatisée, agents conversationnels et analytics prédictives pour aider votre équipe à conclure plus d'affaires avec moins d'effort.</p></div>
+            <div class="svc reveal reveal-d2"><div class="svc-icon">🤖</div><h3 data-i18n="svc.3.t">Agents IA & Chatbots</h3><p data-i18n="svc.3.d">Assistants intelligents entraînés sur vos données — support client, base de connaissances interne, ou interactions clients multicanal, disponibles 24h/24.</p></div>
+            <div class="svc reveal"><div class="svc-icon">📊</div><h3 data-i18n="svc.4.t">Stratégie Data & Analytics</h3><p data-i18n="svc.4.d">Transformez vos données en atout stratégique. Dashboards, pipelines de reporting et modèles prédictifs pour des décisions éclairées en temps réel.</p></div>
+            <div class="svc reveal reveal-d1"><div class="svc-icon">🔗</div><h3 data-i18n="svc.5.t">Intégration de Systèmes</h3><p data-i18n="svc.5.d">Connectez CRM, ERP et outils métier avec un middleware IA. Nous rendons votre stack existant plus intelligent sans tout remplacer.</p></div>
+            <div class="svc reveal reveal-d2"><div class="svc-icon">🎯</div><h3 data-i18n="svc.6.t">Stratégie IA & Formation</h3><p data-i18n="svc.6.d">Audit de votre entreprise, identification des opportunités IA à plus fort impact, et formation de vos équipes à l'utilisation efficace des outils d'IA.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results" id="results">
+    <div class="container">
+        <div class="reveal">
+            <div class="sec-eyebrow" data-i18n="res.label">Résultats Clients</div>
+            <div class="sec-title" data-i18n="res.title">Des résultats concrets, pas des promesses</div>
+            <div class="sec-sub" data-i18n="res.sub">Voici ce que nos clients obtiennent avec nos stratégies IA et automatisation.</div>
+        </div>
+        <div class="results-grid">
+            <div class="result-card reveal"><div class="result-num">-60%</div><div class="result-label" data-i18n="res.1.l">Temps sur les tâches manuelles</div><div class="result-desc" data-i18n="res.1.d">Automatisation des processus répétitifs — saisie de données, relances, traitement de documents.</div></div>
+            <div class="result-card reveal reveal-d1"><div class="result-num">+45%</div><div class="result-label" data-i18n="res.2.l">Taux de conversion commercial</div><div class="result-desc" data-i18n="res.2.d">Scoring intelligent, relances automatisées et personnalisation de l'outreach à grande échelle.</div></div>
+            <div class="result-card reveal reveal-d2"><div class="result-num">24/7</div><div class="result-label" data-i18n="res.3.l">Support client automatisé</div><div class="result-desc" data-i18n="res.3.d">Agents IA qui répondent aux questions fréquentes, qualifient les leads et escaladent intelligemment.</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+    <div class="container">
+        <div class="reveal">
+            <div class="sec-eyebrow" data-i18n="proc.label">Notre Processus</div>
+            <div class="sec-title" data-i18n="proc.title">De la découverte au déploiement</div>
+            <div class="sec-sub" data-i18n="proc.sub">Une méthodologie éprouvée qui génère un ROI mesurable à chaque étape.</div>
+        </div>
+        <div class="process-steps">
+            <div class="pstep reveal"><div class="pstep-num">1</div><h4 data-i18n="proc.1.t">Découverte & Audit</h4><p data-i18n="proc.1.d">Analyse de vos opérations, identification des goulots d'étranglement et cartographie des opportunités IA les plus rentables.</p></div>
+            <div class="pstep reveal reveal-d1"><div class="pstep-num">2</div><h4 data-i18n="proc.2.t">Stratégie Sur Mesure</h4><p data-i18n="proc.2.d">Recommandations logicielles, projections de ROI et architecture d'une solution adaptée à vos besoins et votre budget.</p></div>
+            <div class="pstep reveal reveal-d2"><div class="pstep-num">3</div><h4 data-i18n="proc.3.t">Développement & Déploiement</h4><p data-i18n="proc.3.d">Développement rapide par phases itératives. Vous voyez des résultats en semaines, pas en mois.</p></div>
+            <div class="pstep reveal reveal-d3"><div class="pstep-num">4</div><h4 data-i18n="proc.4.t">Optimisation & Scaling</h4><p data-i18n="proc.4.d">Monitoring continu, ajustements et expansion. Vos systèmes IA grandissent avec votre entreprise.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+    <div class="container">
+        <div class="reveal">
+            <div class="sec-eyebrow" data-i18n="price.label">Tarifs</div>
+            <div class="sec-title" data-i18n="price.title">Transparent et accessible</div>
+            <div class="sec-sub" data-i18n="price.sub">Des formules conçues pour les PME et ETI. Pas de surprise, pas de coûts cachés.</div>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-card reveal">
+                <div class="price-name" data-i18n="price.1.name">Stratégie IA</div>
+                <div class="price-desc" data-i18n="price.1.desc">Audit complet et feuille de route pour optimiser vos processus avec l'IA.</div>
+                <div class="price-amount"><span class="price-from" data-i18n="price.from">À partir de</span></div>
+                <div class="price-amount"><span class="price-val">€2.900</span></div>
+                <div class="price-note" data-i18n="price.1.note">Livré en 2-3 semaines</div>
+                <ul class="price-features">
+                    <li data-i18n="price.1.f1">Audit des processus & workflows</li>
+                    <li data-i18n="price.1.f2">Identification des opportunités IA</li>
+                    <li data-i18n="price.1.f3">Recommandations logicielles</li>
+                    <li data-i18n="price.1.f4">Projections de ROI détaillées</li>
+                    <li data-i18n="price.1.f5">Feuille de route priorisée</li>
+                </ul>
+                <a href="#contact" class="price-cta price-cta-outline" data-i18n="price.cta.start">Démarrer →</a>
+            </div>
+            <div class="price-card featured reveal reveal-d1">
+                <div class="price-badge" data-i18n="price.popular">POPULAIRE</div>
+                <div class="price-name" data-i18n="price.2.name">Implémentation</div>
+                <div class="price-desc" data-i18n="price.2.desc">Conception, développement et déploiement de solutions IA sur mesure.</div>
+                <div class="price-amount"><span class="price-from" data-i18n="price.from">À partir de</span></div>
+                <div class="price-amount"><span class="price-val">€4.500</span></div>
+                <div class="price-note" data-i18n="price.2.note">Selon périmètre et complexité</div>
+                <ul class="price-features">
+                    <li data-i18n="price.2.f1">Tout le pack Stratégie inclus</li>
+                    <li data-i18n="price.2.f2">Développement & intégration</li>
+                    <li data-i18n="price.2.f3">Agents IA / chatbots sur mesure</li>
+                    <li data-i18n="price.2.f4">Intégration à votre stack existant</li>
+                    <li data-i18n="price.2.f5">Formation de votre équipe</li>
+                    <li data-i18n="price.2.f6">30 jours de support post-déploiement</li>
+                </ul>
+                <a href="#contact" class="price-cta price-cta-dark" data-i18n="price.cta.start">Démarrer →</a>
+            </div>
+            <div class="price-card reveal reveal-d2">
+                <div class="price-name" data-i18n="price.3.name">Accompagnement Continu</div>
+                <div class="price-desc" data-i18n="price.3.desc">Un pool d'heures mensuel pour optimisation, support et évolution continue.</div>
+                <div class="price-amount"><span class="price-from" data-i18n="price.from">À partir de</span></div>
+                <div class="price-amount"><span class="price-val">€800</span><span class="price-unit" data-i18n="price.monthly">/mois</span></div>
+                <div class="price-note" data-i18n="price.3.note">Sans engagement de durée</div>
+                <ul class="price-features">
+                    <li data-i18n="price.3.f1">Monitoring & optimisation continue</li>
+                    <li data-i18n="price.3.f2">Support prioritaire</li>
+                    <li data-i18n="price.3.f3">Nouvelles intégrations & features</li>
+                    <li data-i18n="price.3.f4">Reporting mensuel de performance</li>
+                    <li data-i18n="price.3.f5">Évolution avec vos besoins</li>
+                </ul>
+                <a href="#contact" class="price-cta price-cta-outline" data-i18n="price.cta.start">Démarrer →</a>
+            </div>
+        </div>
+
+        <div class="popular reveal">
+            <div class="popular-title" data-i18n="pop.title">Solutions populaires :</div>
+            <div class="popular-grid">
+                <div class="pop-card"><h4 data-i18n="pop.1.t">Agents IA</h4><div class="pop-price" data-i18n="pop.1.p">À partir de €4.000</div><p data-i18n="pop.1.d">Déléguez le travail répétitif à des agents IA autonomes intégrés à vos outils.</p></div>
+                <div class="pop-card"><h4 data-i18n="pop.2.t">Dashboards Temps Réel</h4><div class="pop-price" data-i18n="pop.2.p">À partir de €2.400</div><p data-i18n="pop.2.d">Connectez vos sources de données dans un dashboard unifié pour un pilotage en temps réel.</p></div>
+                <div class="pop-card"><h4 data-i18n="pop.3.t">Outreach Personnalisé</h4><div class="pop-price" data-i18n="pop.3.p">À partir de €1.200</div><p data-i18n="pop.3.d">Automatisez la personnalisation à grande échelle pour surpasser les campagnes génériques.</p></div>
+            </div>
+        </div>
+        <div class="pricing-note" data-i18n="price.disclaimer">Tous les tarifs sont indicatifs et sujets au périmètre du projet. Tarif journalier de €800. Hors frais logiciels (le cas échéant).</div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container reveal">
+        <div class="sec-eyebrow" style="justify-content:center" data-i18n="cta.label">Prêt ?</div>
+        <div class="sec-title" data-i18n="cta.title">Débloquez votre potentiel<br>avec l'intelligence artificielle</div>
+        <div class="sec-sub" data-i18n="cta.sub">Réservez un appel découverte gratuit de 30 minutes. Pas de pitch, pas de pression — une conversation concrète sur ce que l'IA peut faire pour votre business.</div>
+        <a href="#contact" class="btn btn-dark" data-i18n="cta.btn">Réserver ma consultation gratuite →</a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="reveal">
+            <div class="sec-eyebrow" data-i18n="ct.label">Contact</div>
+            <div class="sec-title" data-i18n="ct.title">Démarrons la conversation</div>
+        </div>
+        <div class="contact-layout">
+            <div class="contact-info reveal">
+                <div class="ci"><div class="ci-icon">✉️</div><div><h4>Email</h4><p><a href="mailto:contact@mcbart.com">contact@mcbart.com</a></p></div></div>
+                <div class="ci"><div class="ci-icon">🌐</div><div><h4 data-i18n="ct.lang.t">Langues</h4><p>English · Français · Italiano</p></div></div>
+                <div class="ci"><div class="ci-icon">🕐</div><div><h4 data-i18n="ct.resp.t">Temps de Réponse</h4><p data-i18n="ct.resp.d">Réponse sous 24h, généralement plus vite.</p></div></div>
+                <div class="ci"><div class="ci-icon">🔒</div><div><h4 data-i18n="ct.gdpr.t">RGPD Conforme</h4><p data-i18n="ct.gdpr.d">Vos données restent protégées. Conformité européenne totale.</p></div></div>
+            </div>
+            <form class="contact-form reveal reveal-d1" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <input type="text" placeholder="Votre nom" data-i18n-ph="f.name" required>
+                    <input type="text" placeholder="Entreprise" data-i18n-ph="f.company">
+                </div>
+                <input type="email" placeholder="Adresse email" data-i18n-ph="f.email" required>
+                <input type="tel" placeholder="Téléphone (optionnel)" data-i18n-ph="f.phone">
+                <select required>
+                    <option value="" disabled selected data-i18n="f.interest">Je suis intéressé par...</option>
+                    <option value="strategy" data-i18n="f.o1">Stratégie IA & Audit</option>
+                    <option value="automation" data-i18n="f.o2">Automatisation des Processus</option>
+                    <option value="sales" data-i18n="f.o3">Intelligence Commerciale</option>
+                    <option value="chatbot" data-i18n="f.o4">Agent IA / Chatbot</option>
+                    <option value="data" data-i18n="f.o5">Stratégie Data & Analytics</option>
+                    <option value="integration" data-i18n="f.o6">Intégration de Systèmes</option>
+                    <option value="other" data-i18n="f.o7">Autre / Pas encore sûr</option>
+                </select>
+                <textarea placeholder="Décrivez votre projet ou défi..." data-i18n-ph="f.msg"></textarea>
+                <button type="submit" class="btn btn-dark" style="width:100%;justify-content:center" data-i18n="f.submit">Envoyer le message →</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-copy">© 2026 BartAI. <span data-i18n="ft.rights">Tous droits réservés.</span> · mcbart.com</div>
+            <div class="footer-links">
+                <a href="#" data-i18n="ft.privacy">Politique de confidentialité</a>
+                <a href="#services" data-i18n="nav.services">Services</a>
+                <a href="#pricing" data-i18n="nav.pricing">Tarifs</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+const T={en:{
+"nav.services":"Services","nav.results":"Results","nav.pricing":"Pricing","nav.process":"Process","nav.contact":"Contact","nav.cta":"Get Started →",
+"hero.eyebrow":"Artificial Intelligence Consulting","hero.title":"Bespoke AI that <em>transforms</em> your business","hero.desc":"We design and deploy concrete AI solutions that automate workflows, accelerate sales, and unlock growth — built specifically for your business.","hero.cta1":"Book a Discovery Call →","hero.cta2":"Explore Services",
+"hero.card.label":"AVERAGE CLIENT IMPACT","hero.card.desc":"Average return on investment observed","hero.float":"+768h saved/year",
+"stats.hours":"Hours Saved","stats.roi":"Return on Investment","stats.bespoke":"Bespoke Solutions","stats.lang":"Languages: EN · FR · IT",
+"svc.label":"Our Services","svc.title":"High-impact AI use cases","svc.sub":"Our consultants make AI accessible for your business — leaner, more profitable, more competitive.",
+"svc.1.t":"Workflow Automation","svc.1.d":"Eliminate manual tasks. We map your operations and deploy AI agents that handle repetitive work — data entry, document processing, workflows — saving hundreds of hours monthly.",
+"svc.2.t":"Sales Intelligence","svc.2.d":"AI-powered lead scoring, automated outreach, conversational agents, and predictive analytics to help your team close more deals with less effort.",
+"svc.3.t":"AI Agents & Chatbots","svc.3.d":"Intelligent assistants trained on your data — customer support, internal knowledge base, or multichannel client interactions, available 24/7.",
+"svc.4.t":"Data Strategy & Analytics","svc.4.d":"Turn your data into a strategic asset. Dashboards, reporting pipelines, and predictive models for real-time, informed decision-making.",
+"svc.5.t":"Systems Integration","svc.5.d":"Connect your CRM, ERP, and business tools with AI middleware. We make your existing stack smarter without replacing what works.",
+"svc.6.t":"AI Strategy & Training","svc.6.d":"Business audit, highest-impact AI opportunity identification, and team training to effectively leverage AI tools.",
+"res.label":"Client Results","res.title":"Real results, not promises","res.sub":"Here's what our clients achieve with our AI & automation strategies.",
+"res.1.l":"Time on manual tasks","res.1.d":"Automation of repetitive processes — data entry, follow-ups, document processing.",
+"res.2.l":"Sales conversion rate","res.2.d":"Intelligent scoring, automated follow-ups, and personalised outreach at scale.",
+"res.3.l":"Automated customer support","res.3.d":"AI agents that handle FAQs, qualify leads, and escalate intelligently.",
+"proc.label":"Our Process","proc.title":"From discovery to deployment","proc.sub":"A proven methodology that delivers measurable ROI at every stage.",
+"proc.1.t":"Discovery & Audit","proc.1.d":"Analysis of your operations, bottleneck identification, and mapping of the most profitable AI opportunities.",
+"proc.2.t":"Bespoke Strategy","proc.2.d":"Software recommendations, ROI projections, and solution architecture tailored to your needs and budget.",
+"proc.3.t":"Build & Deploy","proc.3.d":"Rapid phased development with iterative feedback. You see results in weeks, not months.",
+"proc.4.t":"Optimise & Scale","proc.4.d":"Continuous monitoring, adjustments, and expansion. Your AI systems grow with your business.",
+"price.label":"Pricing","price.title":"Transparent & accessible","price.sub":"Packages designed for SMBs and mid-market companies. No surprises, no hidden fees.",
+"price.from":"From","price.monthly":"/month","price.popular":"POPULAR",
+"price.1.name":"AI Strategy","price.1.desc":"Full audit and roadmap to optimise your processes with AI.","price.1.note":"Delivered in 2-3 weeks",
+"price.1.f1":"Process & workflow audit","price.1.f2":"AI opportunity identification","price.1.f3":"Software recommendations","price.1.f4":"Detailed ROI projections","price.1.f5":"Prioritised roadmap",
+"price.2.name":"Implementation","price.2.desc":"Design, development, and deployment of bespoke AI solutions.","price.2.note":"Based on scope & complexity",
+"price.2.f1":"Full Strategy package included","price.2.f2":"Development & integration","price.2.f3":"Custom AI agents / chatbots","price.2.f4":"Integration with your existing stack","price.2.f5":"Team training","price.2.f6":"30 days post-deployment support",
+"price.3.name":"Ongoing Support","price.3.desc":"A monthly pool of hours for optimisation, support, and continuous evolution.","price.3.note":"No commitment required",
+"price.3.f1":"Continuous monitoring & optimisation","price.3.f2":"Priority support","price.3.f3":"New integrations & features","price.3.f4":"Monthly performance reporting","price.3.f5":"Evolves with your needs",
+"price.cta.start":"Get Started →",
+"pop.title":"Popular solutions:","pop.1.t":"AI Agents","pop.1.p":"From €4,000","pop.1.d":"Delegate repetitive work to autonomous AI agents integrated with your tools.",
+"pop.2.t":"Real-Time Dashboards","pop.2.p":"From €2,400","pop.2.d":"Connect your data sources into a unified dashboard for real-time decision-making.",
+"pop.3.t":"Personalised Outreach","pop.3.p":"From €1,200","pop.3.d":"Automate personalisation at scale to outperform generic email campaigns.",
+"price.disclaimer":"All prices are indicative and subject to project scope. Day rate of €800. Excludes software fees (where applicable).",
+"cta.label":"Ready?","cta.title":"Unlock your potential<br>with artificial intelligence","cta.sub":"Book a free 30-minute discovery call. No pitch, no pressure — a concrete conversation about what AI can do for your business.","cta.btn":"Book My Free Consultation →",
+"ct.label":"Contact","ct.title":"Start the conversation","ct.lang.t":"Languages","ct.resp.t":"Response Time","ct.resp.d":"Reply within 24 hours, usually faster.","ct.gdpr.t":"GDPR Compliant","ct.gdpr.d":"Your data stays protected. Full European compliance.",
+"f.name":"Your name","f.company":"Company","f.email":"Email address","f.phone":"Phone (optional)","f.interest":"I'm interested in...","f.o1":"AI Strategy & Audit","f.o2":"Workflow Automation","f.o3":"Sales Intelligence","f.o4":"AI Agent / Chatbot","f.o5":"Data Strategy & Analytics","f.o6":"Systems Integration","f.o7":"Other / Not sure yet","f.msg":"Describe your project or challenge...","f.submit":"Send Message →",
+"ft.rights":"All rights reserved.","ft.privacy":"Privacy Policy"
+},fr:{
+"nav.services":"Services","nav.results":"Résultats","nav.pricing":"Tarifs","nav.process":"Processus","nav.contact":"Contact","nav.cta":"Commencer →",
+"hero.eyebrow":"Conseil en Intelligence Artificielle","hero.title":"L'IA sur mesure qui <em>transforme</em> votre entreprise","hero.desc":"Nous concevons et déployons des solutions d'IA concrètes qui automatisent vos processus, accélèrent vos ventes et libèrent la croissance — conçues spécifiquement pour votre activité.","hero.cta1":"Réserver un appel découverte →","hero.cta2":"Voir nos services",
+"hero.card.label":"IMPACT CLIENT MOYEN","hero.card.desc":"Retour sur investissement moyen constaté","hero.float":"+768h économisées/an",
+"stats.hours":"Heures Économisées","stats.roi":"Retour sur Investissement","stats.bespoke":"Solutions Sur Mesure","stats.lang":"Langues : EN · FR · IT",
+"svc.label":"Nos Services","svc.title":"Des cas d'usage IA à fort impact","svc.sub":"Nos consultants rendent l'IA accessible à votre entreprise — plus agile, plus rentable, plus compétitive.",
+"svc.1.t":"Automatisation des Processus","svc.1.d":"Éliminez les tâches manuelles. Nous cartographions vos opérations et déployons des agents IA qui gèrent le répétitif — saisie, traitement de documents, workflows — économisant des centaines d'heures par mois.",
+"svc.2.t":"Intelligence Commerciale","svc.2.d":"Scoring de leads par IA, prospection automatisée, agents conversationnels et analytics prédictives pour aider votre équipe à conclure plus d'affaires avec moins d'effort.",
+"svc.3.t":"Agents IA & Chatbots","svc.3.d":"Assistants intelligents entraînés sur vos données — support client, base de connaissances interne, ou interactions clients multicanal, disponibles 24h/24.",
+"svc.4.t":"Stratégie Data & Analytics","svc.4.d":"Transformez vos données en atout stratégique. Dashboards, pipelines de reporting et modèles prédictifs pour des décisions éclairées en temps réel.",
+"svc.5.t":"Intégration de Systèmes","svc.5.d":"Connectez CRM, ERP et outils métier avec un middleware IA. Nous rendons votre stack existant plus intelligent sans tout remplacer.",
+"svc.6.t":"Stratégie IA & Formation","svc.6.d":"Audit de votre entreprise, identification des opportunités IA à plus fort impact, et formation de vos équipes à l'utilisation efficace des outils d'IA.",
+"res.label":"Résultats Clients","res.title":"Des résultats concrets, pas des promesses","res.sub":"Voici ce que nos clients obtiennent avec nos stratégies IA et automatisation.",
+"res.1.l":"Temps sur les tâches manuelles","res.1.d":"Automatisation des processus répétitifs — saisie de données, relances, traitement de documents.",
+"res.2.l":"Taux de conversion commercial","res.2.d":"Scoring intelligent, relances automatisées et personnalisation de l'outreach à grande échelle.",
+"res.3.l":"Support client automatisé","res.3.d":"Agents IA qui répondent aux questions fréquentes, qualifient les leads et escaladent intelligemment.",
+"proc.label":"Notre Processus","proc.title":"De la découverte au déploiement","proc.sub":"Une méthodologie éprouvée qui génère un ROI mesurable à chaque étape.",
+"proc.1.t":"Découverte & Audit","proc.1.d":"Analyse de vos opérations, identification des goulots d'étranglement et cartographie des opportunités IA les plus rentables.",
+"proc.2.t":"Stratégie Sur Mesure","proc.2.d":"Recommandations logicielles, projections de ROI et architecture d'une solution adaptée à vos besoins et votre budget.",
+"proc.3.t":"Développement & Déploiement","proc.3.d":"Développement rapide par phases itératives. Vous voyez des résultats en semaines, pas en mois.",
+"proc.4.t":"Optimisation & Scaling","proc.4.d":"Monitoring continu, ajustements et expansion. Vos systèmes IA grandissent avec votre entreprise.",
+"price.label":"Tarifs","price.title":"Transparent et accessible","price.sub":"Des formules conçues pour les PME et ETI. Pas de surprise, pas de coûts cachés.",
+"price.from":"À partir de","price.monthly":"/mois","price.popular":"POPULAIRE",
+"price.1.name":"Stratégie IA","price.1.desc":"Audit complet et feuille de route pour optimiser vos processus avec l'IA.","price.1.note":"Livré en 2-3 semaines",
+"price.1.f1":"Audit des processus & workflows","price.1.f2":"Identification des opportunités IA","price.1.f3":"Recommandations logicielles","price.1.f4":"Projections de ROI détaillées","price.1.f5":"Feuille de route priorisée",
+"price.2.name":"Implémentation","price.2.desc":"Conception, développement et déploiement de solutions IA sur mesure.","price.2.note":"Selon périmètre et complexité",
+"price.2.f1":"Tout le pack Stratégie inclus","price.2.f2":"Développement & intégration","price.2.f3":"Agents IA / chatbots sur mesure","price.2.f4":"Intégration à votre stack existant","price.2.f5":"Formation de votre équipe","price.2.f6":"30 jours de support post-déploiement",
+"price.3.name":"Accompagnement Continu","price.3.desc":"Un pool d'heures mensuel pour optimisation, support et évolution continue.","price.3.note":"Sans engagement de durée",
+"price.3.f1":"Monitoring & optimisation continue","price.3.f2":"Support prioritaire","price.3.f3":"Nouvelles intégrations & features","price.3.f4":"Reporting mensuel de performance","price.3.f5":"Évolution avec vos besoins",
+"price.cta.start":"Démarrer →",
+"pop.title":"Solutions populaires :","pop.1.t":"Agents IA","pop.1.p":"À partir de €4.000","pop.1.d":"Déléguez le travail répétitif à des agents IA autonomes intégrés à vos outils.",
+"pop.2.t":"Dashboards Temps Réel","pop.2.p":"À partir de €2.400","pop.2.d":"Connectez vos sources de données dans un dashboard unifié pour un pilotage en temps réel.",
+"pop.3.t":"Outreach Personnalisé","pop.3.p":"À partir de €1.200","pop.3.d":"Automatisez la personnalisation à grande échelle pour surpasser les campagnes génériques.",
+"price.disclaimer":"Tous les tarifs sont indicatifs et sujets au périmètre du projet. Tarif journalier de €800. Hors frais logiciels (le cas échéant).",
+"cta.label":"Prêt ?","cta.title":"Débloquez votre potentiel<br>avec l'intelligence artificielle","cta.sub":"Réservez un appel découverte gratuit de 30 minutes. Pas de pitch, pas de pression — une conversation concrète sur ce que l'IA peut faire pour votre business.","cta.btn":"Réserver ma consultation gratuite →",
+"ct.label":"Contact","ct.title":"Démarrons la conversation","ct.lang.t":"Langues","ct.resp.t":"Temps de Réponse","ct.resp.d":"Réponse sous 24h, généralement plus vite.","ct.gdpr.t":"RGPD Conforme","ct.gdpr.d":"Vos données restent protégées. Conformité européenne totale.",
+"f.name":"Votre nom","f.company":"Entreprise","f.email":"Adresse email","f.phone":"Téléphone (optionnel)","f.interest":"Je suis intéressé par...","f.o1":"Stratégie IA & Audit","f.o2":"Automatisation des Processus","f.o3":"Intelligence Commerciale","f.o4":"Agent IA / Chatbot","f.o5":"Stratégie Data & Analytics","f.o6":"Intégration de Systèmes","f.o7":"Autre / Pas encore sûr","f.msg":"Décrivez votre projet ou défi...","f.submit":"Envoyer le message →",
+"ft.rights":"Tous droits réservés.","ft.privacy":"Politique de confidentialité"
+},it:{
+"nav.services":"Servizi","nav.results":"Risultati","nav.pricing":"Tariffe","nav.process":"Processo","nav.contact":"Contatti","nav.cta":"Inizia →",
+"hero.eyebrow":"Consulenza in Intelligenza Artificiale","hero.title":"IA su misura che <em>trasforma</em> la vostra azienda","hero.desc":"Progettiamo e implementiamo soluzioni IA concrete che automatizzano i processi, accelerano le vendite e sbloccano la crescita — costruite specificamente per la vostra attività.","hero.cta1":"Prenota una chiamata conoscitiva →","hero.cta2":"Scopri i servizi",
+"hero.card.label":"IMPATTO MEDIO CLIENTE","hero.card.desc":"Ritorno sull'investimento medio osservato","hero.float":"+768h risparmiate/anno",
+"stats.hours":"Ore Risparmiate","stats.roi":"Ritorno sull'Investimento","stats.bespoke":"Soluzioni Su Misura","stats.lang":"Lingue: EN · FR · IT",
+"svc.label":"I Nostri Servizi","svc.title":"Casi d'uso IA ad alto impatto","svc.sub":"I nostri consulenti rendono l'IA accessibile alla vostra azienda — più agile, più redditizia, più competitiva.",
+"svc.1.t":"Automazione dei Processi","svc.1.d":"Eliminate le attività manuali. Mappiamo le vostre operazioni e implementiamo agenti IA che gestiscono il lavoro ripetitivo — inserimento dati, elaborazione documenti, workflow — risparmiando centinaia di ore al mese.",
+"svc.2.t":"Intelligenza Commerciale","svc.2.d":"Lead scoring basato su IA, outreach automatizzato, agenti conversazionali e analytics predittive per aiutare il vostro team a chiudere più affari con meno sforzo.",
+"svc.3.t":"Agenti IA & Chatbot","svc.3.d":"Assistenti intelligenti addestrati sui vostri dati — supporto clienti, knowledge base interna, o interazioni multicanale, disponibili 24/7.",
+"svc.4.t":"Strategia Dati & Analytics","svc.4.d":"Trasformate i vostri dati in asset strategico. Dashboard, pipeline di reporting e modelli predittivi per decisioni informate in tempo reale.",
+"svc.5.t":"Integrazione di Sistemi","svc.5.d":"Collegate CRM, ERP e strumenti aziendali con middleware IA. Rendiamo il vostro stack esistente più intelligente senza sostituire ciò che funziona.",
+"svc.6.t":"Strategia IA & Formazione","svc.6.d":"Audit aziendale, identificazione delle opportunità IA a più alto impatto e formazione del team sull'utilizzo efficace degli strumenti IA.",
+"res.label":"Risultati Clienti","res.title":"Risultati concreti, non promesse","res.sub":"Ecco cosa ottengono i nostri clienti con le nostre strategie IA e automazione.",
+"res.1.l":"Tempo su attività manuali","res.1.d":"Automazione dei processi ripetitivi — inserimento dati, follow-up, elaborazione documenti.",
+"res.2.l":"Tasso di conversione vendite","res.2.d":"Scoring intelligente, follow-up automatizzati e personalizzazione dell'outreach su scala.",
+"res.3.l":"Supporto clienti automatizzato","res.3.d":"Agenti IA che rispondono alle FAQ, qualificano i lead e scalano in modo intelligente.",
+"proc.label":"Il Nostro Processo","proc.title":"Dalla scoperta all'implementazione","proc.sub":"Una metodologia collaudata che genera ROI misurabile ad ogni fase.",
+"proc.1.t":"Scoperta & Audit","proc.1.d":"Analisi delle vostre operazioni, identificazione dei colli di bottiglia e mappatura delle opportunità IA più redditizie.",
+"proc.2.t":"Strategia Su Misura","proc.2.d":"Raccomandazioni software, proiezioni ROI e architettura di una soluzione adatta alle vostre esigenze e al vostro budget.",
+"proc.3.t":"Sviluppo & Implementazione","proc.3.d":"Sviluppo rapido per fasi iterative. Vedete risultati in settimane, non in mesi.",
+"proc.4.t":"Ottimizzazione & Scalabilità","proc.4.d":"Monitoraggio continuo, aggiustamenti ed espansione. I vostri sistemi IA crescono con la vostra azienda.",
+"price.label":"Tariffe","price.title":"Trasparente e accessibile","price.sub":"Formule pensate per PMI e medie imprese. Nessuna sorpresa, nessun costo nascosto.",
+"price.from":"A partire da","price.monthly":"/mese","price.popular":"POPOLARE",
+"price.1.name":"Strategia IA","price.1.desc":"Audit completo e roadmap per ottimizzare i vostri processi con l'IA.","price.1.note":"Consegnato in 2-3 settimane",
+"price.1.f1":"Audit processi & workflow","price.1.f2":"Identificazione opportunità IA","price.1.f3":"Raccomandazioni software","price.1.f4":"Proiezioni ROI dettagliate","price.1.f5":"Roadmap prioritizzata",
+"price.2.name":"Implementazione","price.2.desc":"Progettazione, sviluppo e implementazione di soluzioni IA su misura.","price.2.note":"In base a portata e complessità",
+"price.2.f1":"Pacchetto Strategia completo incluso","price.2.f2":"Sviluppo & integrazione","price.2.f3":"Agenti IA / chatbot personalizzati","price.2.f4":"Integrazione con il vostro stack esistente","price.2.f5":"Formazione del team","price.2.f6":"30 giorni di supporto post-implementazione",
+"price.3.name":"Supporto Continuativo","price.3.desc":"Un pool di ore mensile per ottimizzazione, supporto ed evoluzione continua.","price.3.note":"Senza impegno di durata",
+"price.3.f1":"Monitoraggio & ottimizzazione continua","price.3.f2":"Supporto prioritario","price.3.f3":"Nuove integrazioni & funzionalità","price.3.f4":"Reporting mensile delle prestazioni","price.3.f5":"Si evolve con le vostre esigenze",
+"price.cta.start":"Inizia →",
+"pop.title":"Soluzioni popolari:","pop.1.t":"Agenti IA","pop.1.p":"A partire da €4.000","pop.1.d":"Delegate il lavoro ripetitivo ad agenti IA autonomi integrati con i vostri strumenti.",
+"pop.2.t":"Dashboard Tempo Reale","pop.2.p":"A partire da €2.400","pop.2.d":"Collegate le vostre fonti dati in una dashboard unificata per un pilotaggio in tempo reale.",
+"pop.3.t":"Outreach Personalizzato","pop.3.p":"A partire da €1.200","pop.3.d":"Automatizzate la personalizzazione su scala per superare le campagne email generiche.",
+"price.disclaimer":"Tutte le tariffe sono indicative e soggette all'ambito del progetto. Tariffa giornaliera di €800. Esclusi costi software (ove applicabile).",
+"cta.label":"Pronti?","cta.title":"Sbloccate il vostro potenziale<br>con l'intelligenza artificiale","cta.sub":"Prenotate una chiamata conoscitiva gratuita di 30 minuti. Nessun pitch, nessuna pressione — una conversazione concreta su cosa l'IA può fare per il vostro business.","cta.btn":"Prenota la mia consulenza gratuita →",
+"ct.label":"Contatti","ct.title":"Iniziamo la conversazione","ct.lang.t":"Lingue","ct.resp.t":"Tempi di Risposta","ct.resp.d":"Risposta entro 24h, generalmente prima.","ct.gdpr.t":"Conforme GDPR","ct.gdpr.d":"I vostri dati restano protetti. Piena conformità europea.",
+"f.name":"Il vostro nome","f.company":"Azienda","f.email":"Indirizzo email","f.phone":"Telefono (opzionale)","f.interest":"Sono interessato a...","f.o1":"Strategia IA & Audit","f.o2":"Automazione dei Processi","f.o3":"Intelligenza Commerciale","f.o4":"Agente IA / Chatbot","f.o5":"Strategia Dati & Analytics","f.o6":"Integrazione di Sistemi","f.o7":"Altro / Non ancora sicuro","f.msg":"Descrivete il vostro progetto o sfida...","f.submit":"Invia messaggio →",
+"ft.rights":"Tutti i diritti riservati.","ft.privacy":"Informativa sulla privacy"
+}};
+
+let lang='fr';
+function setLang(l){
+    lang=l;document.documentElement.lang=l;
+    const t=T[l];if(!t)return;
+    document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent.trim().toLowerCase()===l));
+    document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(t[k]){if(t[k].includes('<')){el.innerHTML=t[k]}else{el.textContent=t[k]}}});
+    document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.getAttribute('data-i18n-ph');if(t[k])el.placeholder=t[k]});
+}
+
+function handleSubmit(e){
+    e.preventDefault();const b=e.target.querySelector('button[type="submit"]');const o=b.textContent;
+    b.textContent=lang==='fr'?'Envoyé ✓':lang==='it'?'Inviato ✓':'Sent ✓';b.style.background='#22c55e';
+    setTimeout(()=>{b.textContent=o;b.style.background='';e.target.reset()},3000);
+}
+
+// Scroll reveal
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Nav scroll
+let lastScroll=0;
+window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>50)});
+
+// Mobile nav close on link click
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+
+// Auto-detect language
+(function(){const b=navigator.language.slice(0,2);if(['en','it'].includes(b))setLang(b);else setLang('fr')})();
+</script>
+</body>
+</html>
