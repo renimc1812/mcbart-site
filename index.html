@@ -3,208 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BartAI — AI Consulting & Automation in Monaco | mcbart.com</title>
-<meta name="description" content="BartAI delivers bespoke AI consulting, automation, and AI solutions in Monaco. Helping SMBs cut costs, boost sales, and scale with practical artificial intelligence.">
-<meta name="keywords" content="AI consulting Monaco, AI solutions Monaco, artificial intelligence Monaco, AI automation Monaco, AI for SMBs, AI chatbots, workflow automation Monaco">
+<title>BartAI — AI Consulting & Automation in Monaco | AI Strategy for SMBs</title>
+<meta name="description" content="BartAI is Monaco's leading AI consulting firm. We help SMBs implement AI strategy, workflow automation, and intelligent agents — delivering real ROI in weeks, not months. AI consulting Monaco.">
+<meta name="keywords" content="AI consulting Monaco, AI solutions Monaco, artificial intelligence Monaco, AI automation Monaco, AI agency Monaco, AI strategy Monaco, AI for small business Monaco, AI consulting French Riviera, conseil IA Monaco, business automation Monaco">
 <link rel="canonical" href="https://mcbart.com">
 <link rel="alternate" hreflang="en" href="https://mcbart.com">
 <link rel="alternate" hreflang="fr" href="https://mcbart.com?lang=fr">
 <meta property="og:title" content="BartAI — AI Consulting & Automation in Monaco">
-<meta property="og:description" content="Bespoke AI solutions for growing businesses on the French Riviera and beyond. Workflow automation, AI agents, data strategy — results in weeks, not months.">
+<meta property="og:description" content="Monaco's AI strategy and implementation partner for growing businesses. From AI confusion to AI confidence — results in weeks.">
 <meta property="og:url" content="https://mcbart.com">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:image" content="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- LocalBusiness + ProfessionalService Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "ProfessionalService"],
   "name": "BartAI",
-  "description": "AI consulting and automation solutions for small and medium businesses in Monaco",
+  "description": "AI consulting and automation firm based in Monaco, helping SMBs implement AI strategy, workflow automation, and intelligent agents.",
   "url": "https://mcbart.com",
   "email": "renato@mcbart.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Monaco",
-    "addressCountry": "MC"
+    "addressCountry": "MC",
+    "addressRegion": "Monaco"
   },
-  "areaServed": ["Monaco", "French Riviera", "Europe"],
-  "serviceType": ["AI Consulting", "Workflow Automation", "AI Chatbots", "Data Analytics"]
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "43.7384",
+    "longitude": "7.4246"
+  },
+  "areaServed": [
+    {"@type": "Place", "name": "Monaco"},
+    {"@type": "Place", "name": "French Riviera"},
+    {"@type": "Place", "name": "Cote d'Azur"},
+    {"@type": "Place", "name": "Europe"}
+  ],
+  "serviceType": ["AI Consulting", "AI Strategy", "Workflow Automation", "AI Chatbots", "Data Analytics", "AI Implementation"],
+  "knowsLanguage": ["English", "French", "Italian"],
+  "priceRange": "$$"
 }
 </script>
+
+<!-- FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What does BartAI do?", "acceptedAnswer": {"@type": "Answer", "text": "BartAI is an AI consulting firm based in Monaco. We help small and medium businesses implement AI strategy, workflow automation, and intelligent agents to drive revenue, cut costs, and scale operations."}},
+    {"@type": "Question", "name": "How much does AI consulting cost in Monaco?", "acceptedAnswer": {"@type": "Answer", "text": "Our engagements are tailored to your business size and goals. We offer a free discovery call to assess your needs and provide a clear roadmap with transparent pricing. Most SMB projects start delivering ROI within 3 weeks."}},
+    {"@type": "Question", "name": "What industries does BartAI serve?", "acceptedAnswer": {"@type": "Answer", "text": "We work across retail, real estate, professional services, manufacturing, construction, hospitality, and marketing agencies — focusing on industries where AI delivers the fastest and most measurable impact."}},
+    {"@type": "Question", "name": "Why not do AI in-house?", "acceptedAnswer": {"@type": "Answer", "text": "Over 90% of AI initiatives fail according to MIT, often because internal teams lack the time or specialized experience. Companies that bring in a dedicated AI partner are 3x more likely to succeed."}},
+    {"@type": "Question", "name": "Can BartAI work with our existing tools?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We start with a deep review of your current tech stack and processes, then identify where AI can plug in — whether it's workflow automation or custom agents connecting your existing tools."}},
+    {"@type": "Question", "name": "How quickly can we see results?", "acceptedAnswer": {"@type": "Answer", "text": "Most clients see measurable results within 3 weeks. Our agile process focuses on quick wins first, then scales what works."}}
+  ]
+}
+</script>
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
---bg-primary:#ffffff;--bg-secondary:#f7f8fa;--bg-dark:#0f1729;
---text-primary:#1a1a2e;--text-secondary:#64748b;--text-light:#cbd5e1;
---accent:#2563eb;--accent-hover:#1d4ed8;--accent-light:rgba(37,99,235,0.08);
---radius:12px;--transition:0.3s cubic-bezier(0.4,0,0.2,1);
+--bg:#faf8f5;--bg2:#f2efe8;--bg3:#eae5db;
+--dark:#1a1714;--dark2:#2c2822;
+--text:#3a352d;--text2:#7a7468;--text-light:#b5ad9e;
+--accent:#c0392b;--accent-hover:#a93226;--accent-light:rgba(192,57,43,0.08);
+--white:#fff;--border:rgba(26,23,20,0.08);--border2:rgba(26,23,20,0.12);
+--radius:10px;--transition:0.4s cubic-bezier(0.4,0,0.2,1);
+--font-serif:'Playfair Display',Georgia,serif;--font-sans:'Inter',system-ui,sans-serif;
 }
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--text-primary);line-height:1.7;font-weight:400;background:var(--bg-primary);-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4{font-weight:700;letter-spacing:-0.025em;line-height:1.2}
-h1{font-size:clamp(2.2rem,5vw,3.5rem)}
-h2{font-size:clamp(1.8rem,4vw,2.8rem)}
-h3{font-size:clamp(1.1rem,2vw,1.35rem)}
+body{font-family:var(--font-sans);color:var(--text);line-height:1.7;background:var(--bg);-webkit-font-smoothing:antialiased}
+h1,h2,h3{line-height:1.15}
+h1,h2{font-family:var(--font-serif);font-weight:600;letter-spacing:-0.02em}
+h1{font-size:clamp(2.4rem,5.5vw,4rem)}
+h2{font-size:clamp(1.9rem,4vw,3rem)}
+h3{font-size:clamp(1.05rem,2vw,1.3rem);font-weight:600;font-family:var(--font-sans)}
 a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
+img{max-width:100%;display:block;height:auto}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:8px;font-weight:600;font-size:0.95rem;cursor:pointer;border:none;transition:var(--transition);font-family:inherit}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:6px;font-weight:600;font-size:0.9rem;cursor:pointer;border:none;transition:var(--transition);font-family:var(--font-sans);letter-spacing:0.01em}
 .btn-primary{background:var(--accent);color:#fff}
-.btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,0.3)}
-.btn-outline{background:transparent;color:var(--accent);border:2px solid var(--accent)}
-.btn-outline:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
-.section-label{font-size:0.85rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px}
-.section-title{margin-bottom:20px}
-.section-subtitle{color:var(--text-secondary);font-size:1.1rem;max-width:640px;margin:0 auto 48px}
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(192,57,43,0.25)}
+.btn-outline{background:transparent;color:var(--dark);border:1.5px solid var(--border2)}
+.btn-outline:hover{border-color:var(--dark);background:var(--dark);color:#fff}
+.btn-dark{background:var(--dark);color:#fff}
+.btn-dark:hover{background:var(--dark2);transform:translateY(-2px)}
+.label{font-size:0.78rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent);margin-bottom:12px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+.img-cover{width:100%;height:100%;object-fit:cover}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 0;transition:var(--transition)}
-nav.scrolled{background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);box-shadow:0 1px 8px rgba(0,0,0,0.06);padding:10px 0}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:var(--transition)}
+nav.scrolled{background:rgba(250,248,245,0.95);backdrop-filter:blur(12px);box-shadow:0 1px 6px rgba(0,0,0,0.04);padding:12px 0}
 .nav-inner{display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:1.5rem;font-weight:700;color:var(--text-primary)}
+.logo{font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--dark)}
 .logo span{color:var(--accent)}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
-.nav-links a{font-size:0.9rem;font-weight:500;color:var(--text-secondary);position:relative;transition:var(--transition)}
-.nav-links a:hover{color:var(--text-primary)}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--accent);transition:var(--transition)}
-.nav-links a:hover::after{width:100%}
-.lang-toggle{display:flex;background:var(--bg-secondary);border-radius:20px;padding:3px;gap:2px}
-.lang-btn{padding:6px 14px;border-radius:18px;font-size:0.8rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-secondary);transition:var(--transition);font-family:inherit}
-.lang-btn.active{background:#fff;color:var(--accent);box-shadow:0 1px 4px rgba(0,0,0,0.08)}
-.nav-cta{padding:10px 22px;font-size:0.85rem}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:0.88rem;font-weight:500;color:var(--text2);transition:var(--transition)}
+.nav-links a:hover{color:var(--dark)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang-toggle{display:flex;background:var(--bg2);border-radius:20px;padding:3px}
+.lang-btn{padding:5px 12px;border-radius:18px;font-size:0.75rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text2);transition:var(--transition);font-family:var(--font-sans)}
+.lang-btn.active{background:#fff;color:var(--dark);box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+.nav-cta{padding:10px 22px;font-size:0.82rem}
 .mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}
-.mobile-toggle svg{width:28px;height:28px;color:var(--text-primary)}
-.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mobile-toggle svg{width:26px;height:26px;color:var(--dark)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(250,248,245,0.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:28px}
 .mobile-menu.open{display:flex}
-.mobile-menu a{font-size:1.3rem;font-weight:600;color:var(--text-primary)}
+.mobile-menu a{font-size:1.2rem;font-weight:600;color:var(--dark)}
 .mobile-close{position:absolute;top:20px;right:24px;background:none;border:none;cursor:pointer}
-.mobile-close svg{width:32px;height:32px}
+.mobile-close svg{width:30px;height:30px}
 
 /* HERO */
-.hero{padding:140px 0 100px;position:relative;overflow:hidden}
+.hero{padding:150px 0 100px;position:relative;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:var(--accent-light);border-radius:20px;font-size:0.85rem;font-weight:500;color:var(--accent);margin-bottom:24px}
-.hero-badge svg{width:16px;height:16px}
-.hero h1{margin-bottom:20px}
-.hero h1 .highlight{color:var(--accent)}
-.hero-text{color:var(--text-secondary);font-size:1.15rem;margin-bottom:36px;max-width:520px}
-.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
-.hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
-.hero-svg{width:100%;max-width:480px}
-.hero-bg-gradient{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(37,99,235,0.06) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:-1}
+.hero-content{max-width:560px}
+.hero h1{margin-bottom:24px;color:var(--dark)}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-text{color:var(--text2);font-size:1.1rem;margin-bottom:36px;line-height:1.8}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-img{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;box-shadow:0 20px 60px rgba(0,0,0,0.1)}
 
-/* WHY AI */
-.why-ai{padding:100px 0;background:var(--bg-secondary)}
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
-.why-card{background:#fff;padding:36px 28px;border-radius:var(--radius);border:1px solid rgba(0,0,0,0.04);transition:var(--transition)}
-.why-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.06)}
-.why-card svg{width:40px;height:40px;color:var(--accent);margin-bottom:16px}
-.why-card h3{margin-bottom:10px}
-.why-card p{color:var(--text-secondary);font-size:0.95rem}
+/* PARTNERS */
+.partners{padding:48px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg);overflow:hidden}
+.partners-label{text-align:center;font-size:0.78rem;font-weight:500;color:var(--text-light);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:24px}
+.marquee{display:flex;gap:60px;animation:marquee 20s linear infinite;width:max-content}
+.marquee-wrap{overflow:hidden}
+.marquee span{font-size:1.1rem;font-weight:700;color:var(--text-light);white-space:nowrap;letter-spacing:0.02em}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* SOCIAL PROOF */
-.proof-bar{padding:60px 0;background:#fff;border-top:1px solid rgba(0,0,0,0.04);border-bottom:1px solid rgba(0,0,0,0.04)}
-.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
-.proof-item .number{font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--accent)}
-.proof-item .label{color:var(--text-secondary);font-size:0.9rem;margin-top:4px}
+/* VALUE PROP */
+.value-prop{padding:100px 0;background:var(--white)}
+.value-header{text-align:center;max-width:700px;margin:0 auto 60px}
+.value-header p{color:var(--text2);font-size:1.05rem;margin-top:16px}
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.value-card{padding:40px 32px;border:1px solid var(--border);border-radius:var(--radius);transition:var(--transition);text-align:center}
+.value-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.05)}
+.value-card .icon{width:48px;height:48px;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--accent-light)}
+.value-card .icon svg{width:24px;height:24px;color:var(--accent)}
+.value-card h3{margin-bottom:12px}
+.value-card p{color:var(--text2);font-size:0.93rem}
+
+/* ENABLEMENT */
+.enablement{padding:100px 0;background:var(--bg2)}
+.enable-header{max-width:600px;margin-bottom:60px}
+.enable-header p{color:var(--text2);font-size:1.05rem;margin-top:16px}
+.enable-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.enable-card{border-radius:var(--radius);overflow:hidden;background:var(--white);transition:var(--transition)}
+.enable-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.08)}
+.enable-card img{aspect-ratio:16/10;object-fit:cover}
+.enable-card-body{padding:28px 24px}
+.enable-card-body h3{margin-bottom:8px}
+.enable-card-body p{color:var(--text2);font-size:0.9rem}
 
 /* SERVICES */
-.services{padding:100px 0}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
-.service-card{background:var(--bg-secondary);padding:36px 30px;border-radius:var(--radius);border:1px solid transparent;transition:var(--transition);position:relative;overflow:hidden}
-.service-card:hover{border-color:rgba(37,99,235,0.15);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.06)}
-.service-card:hover svg{color:var(--accent)}
-.service-card svg{width:36px;height:36px;color:var(--text-secondary);margin-bottom:16px;transition:var(--transition)}
-.service-card h3{margin-bottom:10px}
-.service-card p{color:var(--text-secondary);font-size:0.93rem}
+.services{padding:100px 0;background:var(--white)}
+.services-header{text-align:center;max-width:700px;margin:0 auto 60px}
+.services-header p{color:var(--text2);font-size:1.05rem;margin-top:16px}
+.service-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:64px}
+.service-row:last-child{margin-bottom:0}
+.service-row.reverse{direction:rtl}
+.service-row.reverse>*{direction:ltr}
+.service-img{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;box-shadow:0 12px 36px rgba(0,0,0,0.08)}
+.service-content h3{font-size:1.3rem;margin-bottom:12px}
+.service-content p{color:var(--text2);margin-bottom:24px;font-size:0.95rem}
 
 /* INDUSTRIES */
-.industries{padding:100px 0;background:var(--bg-secondary)}
-.industries-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-.industry-card{background:#fff;padding:28px 24px;border-radius:var(--radius);display:flex;gap:18px;align-items:flex-start;transition:var(--transition);border:1px solid transparent}
-.industry-card:hover{border-color:rgba(37,99,235,0.12);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.05)}
-.industry-card svg{width:32px;height:32px;color:var(--accent);flex-shrink:0;margin-top:2px}
-.industry-card h3{font-size:1.05rem;margin-bottom:6px}
-.industry-card p{color:var(--text-secondary);font-size:0.9rem}
+.industries{padding:100px 0;background:var(--bg2)}
+.industries-header{text-align:center;max-width:700px;margin:0 auto 60px}
+.industries-header p{color:var(--text2);font-size:1.05rem;margin-top:16px}
+.industries-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.ind-card{display:flex;gap:16px;align-items:flex-start;padding:24px;background:var(--white);border-radius:var(--radius);border:1px solid var(--border);transition:var(--transition)}
+.ind-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.05)}
+.ind-card svg{width:28px;height:28px;color:var(--accent);flex-shrink:0;margin-top:2px}
+.ind-card h3{font-size:0.98rem;margin-bottom:4px}
+.ind-card p{color:var(--text2);font-size:0.85rem;line-height:1.5}
 
-/* PROCESS */
-.process{padding:100px 0}
-.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-.process-steps::before{content:'';position:absolute;top:28px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,var(--accent) var(--line-progress,0%),#e2e8f0 var(--line-progress,0%))}
-.step{text-align:center;position:relative;padding:0 16px}
-.step-num{width:56px;height:56px;border-radius:50%;background:var(--accent-light);color:var(--accent);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:1.2rem;margin-bottom:20px;position:relative;z-index:1;border:3px solid #fff;transition:var(--transition)}
-.step.active .step-num{background:var(--accent);color:#fff}
-.step h3{margin-bottom:8px;font-size:1.05rem}
-.step p{color:var(--text-secondary);font-size:0.88rem}
+/* TESTIMONIAL */
+.testimonial{padding:100px 0;background:var(--white);text-align:center}
+.testimonial blockquote{font-family:var(--font-serif);font-size:clamp(1.3rem,3vw,2rem);font-weight:400;font-style:italic;color:var(--dark);max-width:800px;margin:0 auto 32px;line-height:1.5}
+.testimonial cite{font-style:normal;font-size:0.95rem;color:var(--text2);display:block}
+.testimonial cite strong{color:var(--dark);display:block;margin-bottom:2px}
 
-/* RESULTS */
-.results{padding:100px 0;background:var(--bg-dark);color:#fff}
-.results .section-label{color:rgba(37,99,235,0.8)}
-.results .section-subtitle{color:var(--text-light)}
-.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.result-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:40px 32px;text-align:center;transition:var(--transition)}
-.result-card:hover{background:rgba(255,255,255,0.07);transform:translateY(-4px)}
-.result-card .metric{font-size:clamp(2.5rem,5vw,3.5rem);font-weight:700;color:var(--accent);display:block;margin-bottom:8px}
-.result-card .metric-label{font-size:1.05rem;font-weight:600;margin-bottom:8px}
-.result-card p{color:var(--text-light);font-size:0.9rem}
+/* FAQ */
+.faq{padding:100px 0;background:var(--bg2)}
+.faq-header{text-align:center;max-width:600px;margin:0 auto 60px}
+.faq-header p{color:var(--text2);font-size:1.05rem;margin-top:16px}
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:0}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 0;cursor:pointer;font-weight:600;font-size:1rem;color:var(--dark);background:none;border:none;width:100%;text-align:left;font-family:var(--font-sans);transition:var(--transition)}
+.faq-q:hover{color:var(--accent)}
+.faq-q svg{width:20px;height:20px;flex-shrink:0;transition:var(--transition);color:var(--text2)}
+.faq-q.open svg{transform:rotate(45deg);color:var(--accent)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease;padding:0 0;color:var(--text2);font-size:0.93rem;line-height:1.7}
+.faq-a.open{max-height:300px;padding:0 0 22px}
 
-/* ABOUT */
-.about{padding:100px 0}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-text p{color:var(--text-secondary);margin-bottom:16px;font-size:1.02rem}
-.about-diff{display:flex;flex-direction:column;gap:20px}
-.diff-card{display:flex;gap:16px;align-items:flex-start;padding:24px;background:var(--bg-secondary);border-radius:var(--radius);transition:var(--transition)}
-.diff-card:hover{transform:translateX(4px)}
-.diff-card svg{width:28px;height:28px;color:var(--accent);flex-shrink:0;margin-top:2px}
-.diff-card h3{font-size:1rem;margin-bottom:4px}
-.diff-card p{color:var(--text-secondary);font-size:0.9rem}
+/* CTA BAND */
+.cta-band{padding:80px 0;background:var(--dark);color:#fff;text-align:center}
+.cta-band h2{color:#fff;margin-bottom:16px}
+.cta-band p{color:var(--text-light);font-size:1.05rem;margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto}
 
 /* CONTACT */
-.contact{padding:100px 0;background:var(--bg-secondary)}
+.contact{padding:100px 0;background:var(--bg)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .contact-info h2{margin-bottom:16px}
-.contact-info>p{color:var(--text-secondary);margin-bottom:32px}
+.contact-info>p{color:var(--text2);margin-bottom:32px;font-size:1.02rem}
 .info-items{display:flex;flex-direction:column;gap:20px}
 .info-item{display:flex;gap:14px;align-items:center}
-.info-item svg{width:22px;height:22px;color:var(--accent);flex-shrink:0}
-.info-item span{color:var(--text-secondary);font-size:0.95rem}
-.contact-form{background:#fff;padding:40px;border-radius:var(--radius);box-shadow:0 4px 24px rgba(0,0,0,0.04)}
-.form-group{margin-bottom:20px}
-.form-group label{display:block;font-size:0.88rem;font-weight:600;margin-bottom:6px;color:var(--text-primary)}
-.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1px solid #e2e8f0;border-radius:8px;font-size:0.95rem;font-family:inherit;transition:var(--transition);background:#fff;color:var(--text-primary)}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-light)}
+.info-item svg{width:20px;height:20px;color:var(--accent);flex-shrink:0}
+.info-item span{color:var(--text2);font-size:0.93rem}
+.contact-form{background:var(--white);padding:40px;border-radius:var(--radius);border:1px solid var(--border);box-shadow:0 4px 20px rgba(0,0,0,0.03)}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:0.85rem;font-weight:600;margin-bottom:6px;color:var(--dark)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1px solid var(--border2);border-radius:6px;font-size:0.93rem;font-family:var(--font-sans);transition:var(--transition);background:var(--bg);color:var(--text)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-light);background:#fff}
 .form-group textarea{resize:vertical;min-height:100px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form-submit{width:100%;padding:14px;font-size:1rem}
-.form-status{text-align:center;padding:12px;border-radius:8px;margin-top:12px;font-size:0.9rem;display:none}
+.form-submit{width:100%;padding:14px;font-size:0.95rem}
+.form-status{text-align:center;padding:12px;border-radius:6px;margin-top:12px;font-size:0.88rem;display:none}
 .form-status.success{display:block;background:rgba(34,197,94,0.1);color:#16a34a}
 .form-status.error{display:block;background:rgba(239,68,68,0.1);color:#dc2626}
-.form-status.loading{display:block;color:var(--text-secondary)}
+.form-status.loading{display:block;color:var(--text2)}
 
 /* FOOTER */
-footer{background:var(--bg-dark);color:#fff;padding:48px 0 24px}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.08)}
-.footer-logo{font-size:1.3rem;font-weight:700}
-.footer-logo span{color:var(--accent)}
-.footer-links{display:flex;gap:24px;list-style:none}
-.footer-links a{color:var(--text-light);font-size:0.88rem;transition:var(--transition)}
-.footer-links a:hover{color:#fff}
-.footer-bottom{text-align:center;padding-top:24px;color:var(--text-light);font-size:0.82rem}
+footer{background:var(--dark);color:#fff;padding:64px 0 24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-about{max-width:280px}
+.footer-about .logo{color:#fff;margin-bottom:12px;display:block}
+.footer-about p{color:rgba(255,255,255,0.5);font-size:0.88rem;line-height:1.6}
+.footer-col h4{font-size:0.82rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.4);margin-bottom:16px}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:10px}
+.footer-col a{color:rgba(255,255,255,0.6);font-size:0.88rem;transition:var(--transition)}
+.footer-col a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;flex-wrap:wrap;gap:12px}
+.footer-bottom p{color:rgba(255,255,255,0.35);font-size:0.8rem}
+.social-links{display:flex;gap:16px}
+.social-links a{color:rgba(255,255,255,0.4);transition:var(--transition)}
+.social-links a:hover{color:#fff}
+.social-links svg{width:18px;height:18px}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
-.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
-.hero-visual{display:none}
-.process-steps{grid-template-columns:repeat(2,1fr);gap:32px}
-.process-steps::before{display:none}
-.results-grid{grid-template-columns:1fr}
-.about-diff{margin-top:8px}
+.hero-grid,.service-row,.contact-grid{grid-template-columns:1fr}
+.hero-img{max-height:360px}
+.service-row.reverse{direction:ltr}
+.value-grid,.enable-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:640px){
 .nav-links{display:none}
@@ -212,13 +266,12 @@ footer{background:var(--bg-dark);color:#fff;padding:48px 0 24px}
 .mobile-toggle{display:block}
 .hero{padding:110px 0 60px}
 .hero-btns{flex-direction:column}
-.proof-grid{grid-template-columns:repeat(2,1fr);gap:20px}
-.services-grid,.industries-grid{grid-template-columns:1fr}
-.process-steps{grid-template-columns:1fr}
+.proof-grid{grid-template-columns:repeat(2,1fr)}
+.industries-grid{grid-template-columns:1fr}
 .form-row{grid-template-columns:1fr}
-.footer-inner{flex-direction:column;text-align:center}
-.footer-links{flex-wrap:wrap;justify-content:center}
-section{padding:72px 0 !important}
+.footer-grid{grid-template-columns:1fr}
+.footer-bottom{flex-direction:column;text-align:center}
+section,.value-prop,.enablement,.services,.industries,.testimonial,.faq,.contact{padding:72px 0 !important}
 }
 @media(prefers-reduced-motion:reduce){
 .reveal{opacity:1;transform:none;transition:none}
@@ -235,16 +288,17 @@ section{padding:72px 0 !important}
 <ul class="nav-links">
 <li><a href="#services" data-i18n="nav_services">Services</a></li>
 <li><a href="#industries" data-i18n="nav_industries">Industries</a></li>
-<li><a href="#process" data-i18n="nav_process">Process</a></li>
-<li><a href="#results" data-i18n="nav_results">Results</a></li>
+<li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
 <li><a href="#about" data-i18n="nav_about">About</a></li>
 <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
 </ul>
+<div class="nav-right">
 <div class="lang-toggle">
 <button class="lang-btn active" data-lang="en">EN</button>
 <button class="lang-btn" data-lang="fr">FR</button>
 </div>
-<a href="#contact" class="btn btn-primary nav-cta desktop" data-i18n="nav_cta">Book a Call</a>
+<a href="#contact" class="btn btn-primary nav-cta desktop" data-i18n="nav_cta">Talk to an AI Strategist</a>
+</div>
 <button class="mobile-toggle" aria-label="Menu">
 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
 </button>
@@ -258,107 +312,98 @@ section{padding:72px 0 !important}
 </button>
 <a href="#services" data-i18n="nav_services">Services</a>
 <a href="#industries" data-i18n="nav_industries">Industries</a>
-<a href="#process" data-i18n="nav_process">Process</a>
-<a href="#results" data-i18n="nav_results">Results</a>
+<a href="#faq" data-i18n="nav_faq">FAQ</a>
 <a href="#about" data-i18n="nav_about">About</a>
 <a href="#contact" data-i18n="nav_contact">Contact</a>
-<a href="#contact" class="btn btn-primary" data-i18n="nav_cta">Book a Call</a>
+<a href="#contact" class="btn btn-primary" data-i18n="nav_cta">Talk to an AI Strategist</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
 <div class="container hero-grid">
-<div class="reveal">
-<div class="hero-badge">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-<span data-i18n="hero_badge">AI Consulting in Monaco</span>
-</div>
-<h1 data-i18n="hero_title">AI That Works for <span class="highlight">Growing Businesses</span></h1>
-<p class="hero-text" data-i18n="hero_text">No giant budgets. No 12-month timelines. We deliver bespoke AI solutions that cut costs, boost revenue, and scale with your business — results in weeks.</p>
+<div class="hero-content reveal">
+<p class="label" data-i18n="hero_label">AI Consulting in Monaco</p>
+<h1 data-i18n="hero_title">From AI Confusion to <em>AI Confidence</em></h1>
+<p class="hero-text" data-i18n="hero_text">We help growing businesses in Monaco and the Riviera pinpoint the right AI opportunities, implement them seamlessly, and deliver real business impact — in weeks, not months.</p>
 <div class="hero-btns">
-<a href="#contact" class="btn btn-primary" data-i18n="hero_cta1">Book a Free Call</a>
-<a href="#process" class="btn btn-outline" data-i18n="hero_cta2">See How We Work</a>
+<a href="#contact" class="btn btn-primary" data-i18n="hero_cta1">Talk to an AI Strategist</a>
+<a href="#services" class="btn btn-outline" data-i18n="hero_cta2">Explore Our Services</a>
 </div>
 </div>
-<div class="hero-visual reveal">
-<div class="hero-bg-gradient"></div>
-<svg class="hero-svg" viewBox="0 0 480 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<linearGradient id="g1" x1="0" y1="0" x2="480" y2="400"><stop offset="0%" stop-color="#2563eb" stop-opacity="0.15"/><stop offset="100%" stop-color="#2563eb" stop-opacity="0.02"/></linearGradient>
-<linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient>
-</defs>
-<rect width="480" height="400" rx="24" fill="url(#g1)"/>
-<circle cx="240" cy="180" r="60" fill="url(#g2)" opacity="0.12"/>
-<circle cx="240" cy="180" r="36" fill="url(#g2)" opacity="0.2"/>
-<circle cx="240" cy="180" r="8" fill="#2563eb"/>
-<circle cx="120" cy="120" r="6" fill="#2563eb" opacity="0.6"/><circle cx="360" cy="120" r="6" fill="#2563eb" opacity="0.6"/>
-<circle cx="120" cy="260" r="6" fill="#2563eb" opacity="0.6"/><circle cx="360" cy="260" r="6" fill="#2563eb" opacity="0.6"/>
-<circle cx="180" cy="300" r="5" fill="#2563eb" opacity="0.4"/><circle cx="300" cy="300" r="5" fill="#2563eb" opacity="0.4"/>
-<circle cx="180" cy="80" r="5" fill="#2563eb" opacity="0.4"/><circle cx="300" cy="80" r="5" fill="#2563eb" opacity="0.4"/>
-<line x1="240" y1="180" x2="120" y2="120" stroke="#2563eb" stroke-width="1.5" opacity="0.2"/>
-<line x1="240" y1="180" x2="360" y2="120" stroke="#2563eb" stroke-width="1.5" opacity="0.2"/>
-<line x1="240" y1="180" x2="120" y2="260" stroke="#2563eb" stroke-width="1.5" opacity="0.2"/>
-<line x1="240" y1="180" x2="360" y2="260" stroke="#2563eb" stroke-width="1.5" opacity="0.2"/>
-<line x1="120" y1="120" x2="180" y2="80" stroke="#2563eb" stroke-width="1" opacity="0.12"/>
-<line x1="360" y1="120" x2="300" y2="80" stroke="#2563eb" stroke-width="1" opacity="0.12"/>
-<line x1="120" y1="260" x2="180" y2="300" stroke="#2563eb" stroke-width="1" opacity="0.12"/>
-<line x1="360" y1="260" x2="300" y2="300" stroke="#2563eb" stroke-width="1" opacity="0.12"/>
-<text x="240" y="360" text-anchor="middle" fill="#2563eb" font-family="Inter,sans-serif" font-size="14" font-weight="600" opacity="0.5">AI-Powered Growth</text>
-</svg>
+<div class="hero-img reveal">
+<img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="AI strategy consulting session in Monaco — team collaborating on business automation" loading="eager">
 </div>
 </div>
 </section>
 
-<!-- WHY AI FOR SMBs -->
-<section class="why-ai" id="why-ai">
-<div class="container" style="text-align:center">
-<p class="section-label reveal" data-i18n="why_label">Why AI for Your Business</p>
-<h2 class="section-title reveal" data-i18n="why_title">AI Isn't Just for Big Corporations Anymore</h2>
-<p class="section-subtitle reveal" data-i18n="why_subtitle">Small and medium businesses across Monaco and the Riviera are using AI to work smarter, move faster, and grow without limits.</p>
-<div class="why-grid">
-<div class="why-card reveal">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
-<h3 data-i18n="why1_title">Cut Costs & Save Time</h3>
-<p data-i18n="why1_text">Automate repetitive tasks — invoicing, scheduling, data entry — so your team focuses on what actually grows the business.</p>
-</div>
-<div class="why-card reveal">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-<h3 data-i18n="why2_title">Compete with Bigger Players</h3>
-<p data-i18n="why2_text">AI levels the playing field. Get the same insights and automation that enterprises use, at a fraction of the cost.</p>
-</div>
-<div class="why-card reveal">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-<h3 data-i18n="why3_title">Scale Without Hiring</h3>
-<p data-i18n="why3_text">Handle 10x more customers, leads, and orders without expanding your team. AI agents work 24/7 — no holidays, no overtime.</p>
-</div>
-<div class="why-card reveal">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-<h3 data-i18n="why4_title">Make Smarter Decisions</h3>
-<p data-i18n="why4_text">Turn your data into clear, actionable insights. Know what's working, predict what's next, and stop guessing.</p>
-</div>
+<!-- PARTNER LOGOS -->
+<section class="partners">
+<p class="partners-label" data-i18n="partners_label">Powered by leading AI platforms</p>
+<div class="marquee-wrap">
+<div class="marquee">
+<span>OpenAI</span><span>Google AI</span><span>Microsoft Azure</span><span>AWS</span><span>Meta AI</span><span>Anthropic</span><span>Mistral</span><span>Salesforce</span>
+<span>OpenAI</span><span>Google AI</span><span>Microsoft Azure</span><span>AWS</span><span>Meta AI</span><span>Anthropic</span><span>Mistral</span><span>Salesforce</span>
 </div>
 </div>
 </section>
 
-<!-- SOCIAL PROOF BAR -->
-<section class="proof-bar">
+<!-- VALUE PROPOSITION -->
+<section class="value-prop" id="value">
 <div class="container">
-<div class="proof-grid reveal">
-<div class="proof-item">
-<div class="number" data-count="500">0</div>
-<div class="label" data-i18n="proof1">Hours Saved Monthly</div>
+<div class="value-header reveal">
+<p class="label" data-i18n="val_label">Your AI Strategy Partner</p>
+<h2 data-i18n="val_title">We Help You Unlock the Full Power of AI</h2>
+<p data-i18n="val_subtitle">As your AI strategy and implementation partner in Monaco, we deliver measurable outcomes across three pillars.</p>
 </div>
-<div class="proof-item">
-<div class="number" data-count="10" data-suffix="x">0</div>
-<div class="label" data-i18n="proof2">Average ROI</div>
+<div class="value-grid">
+<div class="value-card reveal">
+<div class="icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+<h3 data-i18n="val1_title">Drive Revenue</h3>
+<p data-i18n="val1_text">Scale faster with AI-driven automation and predictive insights that unlock new growth opportunities for your business.</p>
 </div>
-<div class="proof-item">
-<div class="number" data-count="3" data-suffix="-Week">0</div>
-<div class="label" data-i18n="proof3">Delivery Time</div>
+<div class="value-card reveal">
+<div class="icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+<h3 data-i18n="val2_title">Increase Profitability</h3>
+<p data-i18n="val2_text">Optimize operations and eliminate inefficiencies to boost profit margins — without ballooning headcount or overhead.</p>
 </div>
-<div class="proof-item">
-<div class="number" data-count="100" data-suffix="%">0</div>
-<div class="label" data-i18n="proof4">Bespoke Solutions</div>
+<div class="value-card reveal">
+<div class="icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+<h3 data-i18n="val3_title">Elevate Your Team</h3>
+<p data-i18n="val3_text">Remove tedious tasks and empower your people to focus on high-impact, meaningful work that moves the needle.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- STRATEGIC ENABLEMENT -->
+<section class="enablement">
+<div class="container">
+<div class="enable-header reveal">
+<p class="label" data-i18n="enable_label">Strategic AI Enablement</p>
+<h2 data-i18n="enable_title">Set Your Team Up to Succeed with AI</h2>
+<p data-i18n="enable_subtitle">Most businesses know they need AI — they just don't know where to start. We guide you from uncertainty to measurable impact.</p>
+</div>
+<div class="enable-grid">
+<div class="enable-card reveal">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="AI strategy deep-dive meeting in Monaco office" loading="lazy">
+<div class="enable-card-body">
+<h3 data-i18n="en1_title">Find the Highest Impact</h3>
+<p data-i18n="en1_text">We go department by department to identify and implement AI workflows and agents that unlock real ROI for your Monaco business.</p>
+</div>
+</div>
+<div class="enable-card reveal">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="AI tools and analytics dashboard for business optimization" loading="lazy">
+<div class="enable-card-body">
+<h3 data-i18n="en2_title">Optimize Your Tools</h3>
+<p data-i18n="en2_text">We help you select and configure the AI tools that best align with your existing tech stack and business goals.</p>
+</div>
+</div>
+<div class="enable-card reveal">
+<img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" alt="AI training workshop for business teams on the French Riviera" loading="lazy">
+<div class="enable-card-body">
+<h3 data-i18n="en3_title">Shift the Culture</h3>
+<p data-i18n="en3_text">We teach your team how to use AI effectively — when to rely on it and when to lead without it. Lasting transformation, not just tools.</p>
+</div>
 </div>
 </div>
 </div>
@@ -366,40 +411,43 @@ section{padding:72px 0 !important}
 
 <!-- SERVICES -->
 <section class="services" id="services">
-<div class="container" style="text-align:center">
-<p class="section-label reveal" data-i18n="svc_label">What We Do</p>
-<h2 class="section-title reveal" data-i18n="svc_title">AI Solutions Built for Real Results</h2>
-<p class="section-subtitle reveal" data-i18n="svc_subtitle">From automating your workflows to building intelligent agents, we deliver AI that makes a measurable difference.</p>
-<div class="services-grid" style="text-align:left">
-<div class="service-card reveal">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-<h3 data-i18n="svc1_title">Workflow Automation</h3>
-<p data-i18n="svc1_text">Eliminate manual bottlenecks. We map your processes and build AI-powered automations that save hours every week — invoicing, scheduling, reporting, and more.</p>
+<div class="container">
+<div class="services-header reveal">
+<p class="label" data-i18n="svc_label">Our AI Services in Monaco</p>
+<h2 data-i18n="svc_title">Strategy. Implementation. Results.</h2>
+<p data-i18n="svc_subtitle">We don't just advise — we build, deploy, and optimize AI solutions that deliver measurable business outcomes.</p>
 </div>
-<div class="service-card reveal">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-<h3 data-i18n="svc2_title">Sales Intelligence</h3>
-<p data-i18n="svc2_text">Turn leads into customers faster. AI-driven lead scoring, personalized outreach, and smart CRM integration that boost your conversion rates.</p>
+<div class="service-row reveal">
+<div class="service-img">
+<img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=700&q=80" alt="AI strategy planning session for Monaco businesses" loading="lazy">
 </div>
-<div class="service-card reveal">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-<h3 data-i18n="svc3_title">AI Agents & Chatbots</h3>
-<p data-i18n="svc3_text">Deploy intelligent conversational agents that handle customer questions, book appointments, and qualify leads — around the clock, in multiple languages.</p>
+<div class="service-content">
+<p class="label" data-i18n="svc1_label">AI Strategy</p>
+<h3 data-i18n="svc1_title">From Uncertainty to a Clear AI Roadmap</h3>
+<p data-i18n="svc1_text">Most businesses know they need AI but don't know where to start. We audit your operations, identify high-impact opportunities, and deliver a clear roadmap tailored to your goals, budget, and timeline. No cookie-cutter solutions — every strategy is built for your business.</p>
+<a href="#contact" class="btn btn-outline" data-i18n="svc1_cta">Get Your AI Strategy</a>
 </div>
-<div class="service-card reveal">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="8" rx="1"/><rect x="14" y="6" width="3" height="12" rx="1"/></svg>
-<h3 data-i18n="svc4_title">Data Strategy & Analytics</h3>
-<p data-i18n="svc4_text">Make sense of your data. We build dashboards, forecasting models, and analytics systems so you can make confident, data-driven decisions.</p>
 </div>
-<div class="service-card reveal">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-<h3 data-i18n="svc5_title">Systems Integration</h3>
-<p data-i18n="svc5_text">Connect your existing tools with AI. CRM, ERP, e-commerce platforms — we make everything talk to each other seamlessly.</p>
+<div class="service-row reverse reveal">
+<div class="service-img">
+<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80" alt="AI leadership training workshop in Monaco" loading="lazy">
 </div>
-<div class="service-card reveal">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-<h3 data-i18n="svc6_title">AI Strategy & Training</h3>
-<p data-i18n="svc6_text">Not sure where to start? We assess your business, identify high-impact AI opportunities, and train your team to use new tools with confidence.</p>
+<div class="service-content">
+<p class="label" data-i18n="svc2_label">AI Leadership & Training</p>
+<h3 data-i18n="svc2_title">Transform Your Team from AI-Hesitant to AI-Confident</h3>
+<p data-i18n="svc2_text">You can invest in the best AI tools and get zero ROI if your people aren't ready. We train executives and teams through hands-on workshops backed by real-world implementation experience — so adoption sticks and delivers results.</p>
+<a href="#contact" class="btn btn-outline" data-i18n="svc2_cta">Train Your Team</a>
+</div>
+</div>
+<div class="service-row reveal">
+<div class="service-img">
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=700&q=80" alt="AI engineering and automation development in Monaco" loading="lazy">
+</div>
+<div class="service-content">
+<p class="label" data-i18n="svc3_label">AI Engineering & Automation</p>
+<h3 data-i18n="svc3_title">Custom AI Agents, Chatbots & Workflow Automation</h3>
+<p data-i18n="svc3_text">We solve business problems with the right combination of existing tools, smart automation, and custom AI agents. From chatbots that handle customer queries 24/7 to workflow automation that eliminates manual tasks — we build what drives ROI.</p>
+<a href="#contact" class="btn btn-outline" data-i18n="svc3_cta">Automate Your Business</a>
 </div>
 </div>
 </div>
@@ -407,134 +455,101 @@ section{padding:72px 0 !important}
 
 <!-- INDUSTRIES -->
 <section class="industries" id="industries">
-<div class="container" style="text-align:center">
-<p class="section-label reveal" data-i18n="ind_label">Industries We Serve</p>
-<h2 class="section-title reveal" data-i18n="ind_title">AI Solutions for Every Growing Business</h2>
-<p class="section-subtitle reveal" data-i18n="ind_subtitle">We work with SMBs across Monaco and the Riviera, solving real problems in the industries where AI delivers the biggest impact.</p>
-<div class="industries-grid" style="text-align:left">
-<div class="industry-card reveal">
+<div class="container">
+<div class="industries-header reveal">
+<p class="label" data-i18n="ind_label">Industries We Serve in Monaco & the Riviera</p>
+<h2 data-i18n="ind_title">AI Solutions for Every Growing Business</h2>
+<p data-i18n="ind_subtitle">We focus on industries where artificial intelligence delivers the fastest and most measurable impact for SMBs.</p>
+</div>
+<div class="industries-grid">
+<div class="ind-card reveal">
 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
 <div><h3 data-i18n="ind1_title">Retail & E-commerce</h3><p data-i18n="ind1_text">Automate inventory, personalize recommendations, and recover abandoned carts with AI that drives more sales per visitor.</p></div>
 </div>
-<div class="industry-card reveal">
+<div class="ind-card reveal">
 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-<div><h3 data-i18n="ind2_title">Real Estate</h3><p data-i18n="ind2_text">Qualify leads instantly, automate property matching, and generate virtual staging — close deals faster with less manual work.</p></div>
+<div><h3 data-i18n="ind2_title">Real Estate</h3><p data-i18n="ind2_text">Qualify leads instantly, automate property matching, and generate virtual staging — close deals faster across the Riviera.</p></div>
 </div>
-<div class="industry-card reveal">
+<div class="ind-card reveal">
 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
 <div><h3 data-i18n="ind3_title">Professional Services</h3><p data-i18n="ind3_text">Automate proposals, streamline client onboarding, and use AI to manage billing and contracts so you can focus on delivery.</p></div>
 </div>
-<div class="industry-card reveal">
+<div class="ind-card reveal">
 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg>
 <div><h3 data-i18n="ind4_title">Manufacturing & Logistics</h3><p data-i18n="ind4_text">Predict demand, optimize routes, reduce waste, and catch quality issues before they become costly problems.</p></div>
 </div>
-<div class="industry-card reveal">
+<div class="ind-card reveal">
 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-4h6v4"/></svg>
 <div><h3 data-i18n="ind5_title">Construction</h3><p data-i18n="ind5_text">AI-powered project estimation, resource scheduling, and site monitoring that keeps builds on time and under budget.</p></div>
 </div>
-<div class="industry-card reveal">
+<div class="ind-card reveal">
 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
 <div><h3 data-i18n="ind6_title">Hospitality & Tourism</h3><p data-i18n="ind6_text">Multilingual AI concierge, dynamic pricing, automated booking management, and personalized guest experiences on the Riviera.</p></div>
 </div>
-<div class="industry-card reveal">
+<div class="ind-card reveal">
 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
-<div><h3 data-i18n="ind7_title">Marketing & Creative Agencies</h3><p data-i18n="ind7_text">Automate content production, A/B testing, and campaign analytics. Deliver more for clients in less time with AI-powered workflows.</p></div>
+<div><h3 data-i18n="ind7_title">Marketing & Creative Agencies</h3><p data-i18n="ind7_text">Automate content production, A/B testing, and campaign analytics. Deliver more for clients in less time with AI workflows.</p></div>
 </div>
 </div>
 </div>
 </section>
 
-<!-- PROCESS -->
-<section class="process" id="process">
-<div class="container" style="text-align:center">
-<p class="section-label reveal" data-i18n="proc_label">How We Work</p>
-<h2 class="section-title reveal" data-i18n="proc_title">From First Call to Real Results — Fast</h2>
-<p class="section-subtitle reveal" data-i18n="proc_subtitle">Our proven 4-step process is built for speed. Most SMB clients see results within 3 weeks.</p>
-<div class="process-steps reveal">
-<div class="step active">
-<div class="step-num">1</div>
-<h3 data-i18n="step1_title">Discovery & Audit</h3>
-<p data-i18n="step1_text">We learn your business, map your workflows, and identify the highest-impact AI opportunities.</p>
+<!-- TESTIMONIAL -->
+<section class="testimonial" id="testimonial">
+<div class="container reveal">
+<p class="label" data-i18n="test_label">What Our Clients Say</p>
+<blockquote data-i18n="test_quote">"BartAI transformed the way we operate. Within three weeks, they automated our entire client onboarding process and deployed an AI chatbot that handles 80% of inquiries. The ROI was immediate and measurable."</blockquote>
+<cite>
+<strong data-i18n="test_author">Managing Director</strong>
+<span data-i18n="test_company">Professional Services Firm, Monaco</span>
+</cite>
 </div>
-<div class="step">
-<div class="step-num">2</div>
-<h3 data-i18n="step2_title">Custom Strategy</h3>
-<p data-i18n="step2_text">A clear roadmap tailored to your goals, budget, and timeline. No cookie-cutter solutions.</p>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+<div class="container">
+<div class="faq-header reveal">
+<p class="label" data-i18n="faq_label">Frequently Asked Questions</p>
+<h2 data-i18n="faq_title">Common Questions, Straight Answers</h2>
+<p data-i18n="faq_subtitle">No fluff. Just clear answers to what business leaders in Monaco really want to know about AI.</p>
 </div>
-<div class="step">
-<div class="step-num">3</div>
-<h3 data-i18n="step3_title">Build & Deploy</h3>
-<p data-i18n="step3_text">We build, test, and launch your AI solutions. Rapid iterations, with you involved every step.</p>
+<div class="faq-list reveal">
+<div class="faq-item">
+<button class="faq-q" data-i18n="faq1_q">What does BartAI actually do? <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+<div class="faq-a" data-i18n="faq1_a">We're an AI consulting firm based in Monaco. We help small and medium businesses implement AI strategy, workflow automation, and intelligent agents to drive revenue, cut costs, and scale operations — without the enterprise price tag or timeline.</div>
 </div>
-<div class="step">
-<div class="step-num">4</div>
-<h3 data-i18n="step4_title">Optimize & Scale</h3>
-<p data-i18n="step4_text">Ongoing refinement based on real data. As your business grows, your AI grows with it.</p>
+<div class="faq-item">
+<button class="faq-q" data-i18n="faq2_q">How much does AI consulting cost? <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+<div class="faq-a" data-i18n="faq2_a">Every engagement is tailored to your business size and goals. We offer a free discovery call to assess your needs and provide a clear roadmap with transparent pricing. Most SMB projects start delivering ROI within 3 weeks.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" data-i18n="faq3_q">Why not do AI in-house? <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+<div class="faq-a" data-i18n="faq3_a">According to MIT, over 90% of AI initiatives fail — often because internal teams lack the time or specialized experience. Companies that bring in a dedicated AI partner are 3x more likely to succeed. BartAI gives you that partner, based right here in Monaco.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" data-i18n="faq4_q">Can you work with our current tools and systems? <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+<div class="faq-a" data-i18n="faq4_a">Absolutely. We start with a deep review of your current tech stack and processes. Then we identify where AI can plug in — whether it's simple workflow automation or custom agents connecting your existing CRM, ERP, and business tools.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" data-i18n="faq5_q">What industries do you work with? <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+<div class="faq-a" data-i18n="faq5_a">We work across retail, real estate, professional services, manufacturing, construction, hospitality, and marketing agencies — focusing on industries where AI delivers the fastest impact for businesses on the Riviera and beyond.</div>
+</div>
+<div class="faq-item">
+<button class="faq-q" data-i18n="faq6_q">How quickly can we see results? <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+<div class="faq-a" data-i18n="faq6_a">Most clients see measurable results within 3 weeks. Our agile process focuses on quick wins first — automating the tasks that save the most time and money — then we scale what works across your organization.</div>
 </div>
 </div>
 </div>
 </section>
 
-<!-- RESULTS -->
-<section class="results" id="results">
-<div class="container" style="text-align:center">
-<p class="section-label reveal" data-i18n="res_label">Real Results</p>
-<h2 class="section-title reveal" style="color:#fff" data-i18n="res_title">The Impact AI Delivers</h2>
-<p class="section-subtitle reveal" data-i18n="res_subtitle">Measurable outcomes from our SMB clients across Monaco and Europe.</p>
-<div class="results-grid">
-<div class="result-card reveal">
-<span class="metric">-60%</span>
-<div class="metric-label" data-i18n="res1_label">Manual Tasks Eliminated</div>
-<p data-i18n="res1_text">Free your team from repetitive work and redirect effort to growth.</p>
-</div>
-<div class="result-card reveal">
-<span class="metric">+45%</span>
-<div class="metric-label" data-i18n="res2_label">Sales Conversion Increase</div>
-<p data-i18n="res2_text">AI-driven lead scoring and personalized outreach drive higher close rates.</p>
-</div>
-<div class="result-card reveal">
-<span class="metric">24/7</span>
-<div class="metric-label" data-i18n="res3_label">Automated Support</div>
-<p data-i18n="res3_text">AI agents handle customer queries around the clock, in any language.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-<div class="container about-grid">
-<div class="reveal">
-<p class="section-label" data-i18n="about_label">About BartAI</p>
-<h2 class="section-title" data-i18n="about_title">Your Monaco-Based AI Partner</h2>
-<div class="about-text">
-<p data-i18n="about_p1">BartAI was founded to bring practical, affordable AI to the businesses that need it most — small and medium companies ready to grow smarter. Based in Monaco, we understand the unique landscape of the Riviera's business community.</p>
-<p data-i18n="about_p2">We're not a faceless tech consultancy. We're hands-on, multilingual, and obsessed with delivering results you can measure in weeks — not months.</p>
-</div>
-</div>
-<div class="about-diff reveal">
-<div class="diff-card">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m22 8-4 4-2-2"/></svg>
-<div>
-<h3 data-i18n="diff1_title">Built for SMBs, Not Enterprises</h3>
-<p data-i18n="diff1_text">Solutions sized for your business and budget. No enterprise bloat, no unnecessary complexity.</p>
-</div>
-</div>
-<div class="diff-card">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-<div>
-<h3 data-i18n="diff2_title">Results in Weeks, Not Months</h3>
-<p data-i18n="diff2_text">Our agile process delivers working AI in as little as 3 weeks. You see value fast.</p>
-</div>
-</div>
-<div class="diff-card">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m2 12 10-7v14z" opacity="0.3"/><path d="M12 5v14l10-7z"/></svg>
-<div>
-<h3 data-i18n="diff3_title">Monaco-Based & Multilingual</h3>
-<p data-i18n="diff3_text">Local presence, European reach. We work in English, French, and Italian — meeting you where you are.</p>
-</div>
-</div>
-</div>
+<!-- CTA BAND -->
+<section class="cta-band" id="about">
+<div class="container reveal">
+<p class="label" style="color:rgba(192,57,43,0.7)" data-i18n="cta_label">About BartAI</p>
+<h2 data-i18n="cta_title">Monaco's AI Strategy & Implementation Partner</h2>
+<p data-i18n="cta_text">We're not a faceless tech consultancy. We're hands-on, multilingual, and obsessed with delivering measurable results for growing businesses across Monaco and the French Riviera. Less AI hype. More execution. Real impact.</p>
+<a href="#contact" class="btn btn-primary" data-i18n="cta_btn">Book a Free Discovery Call</a>
 </div>
 </section>
 
@@ -542,13 +557,17 @@ section{padding:72px 0 !important}
 <section class="contact" id="contact">
 <div class="container contact-grid">
 <div class="contact-info reveal">
-<p class="section-label" data-i18n="contact_label">Get in Touch</p>
-<h2 data-i18n="contact_title">Let's Talk About Your Business</h2>
-<p data-i18n="contact_subtitle">Book a free 30-minute call. We'll discuss your challenges, identify quick wins, and show you what AI can do for your business — no obligation.</p>
+<p class="label" data-i18n="contact_label">Get in Touch</p>
+<h2 data-i18n="contact_title">Let's Talk About AI for Your Business</h2>
+<p data-i18n="contact_subtitle">Book a free 30-minute discovery call. We'll discuss your challenges, identify quick wins, and show you exactly what AI can do — no obligation, no jargon.</p>
 <div class="info-items">
 <div class="info-item">
 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
 <span>renato@mcbart.com</span>
+</div>
+<div class="info-item">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+<span data-i18n="contact_loc">Monaco, French Riviera</span>
 </div>
 <div class="info-item">
 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -569,6 +588,7 @@ section{padding:72px 0 !important}
 <input type="hidden" name="access_key" value="5ab9b3fc-d28b-41c3-b0a1-855374b01490">
 <input type="hidden" name="subject" value="New inquiry from mcbart.com">
 <input type="hidden" name="from_name" value="BartAI Website">
+<input type="hidden" name="redirect" value="https://web3forms.com/success">
 <input type="checkbox" name="botcheck" style="display:none">
 <div class="form-row">
 <div class="form-group">
@@ -589,19 +609,18 @@ section{padding:72px 0 !important}
 <label for="interest" data-i18n="form_interest">I'm interested in *</label>
 <select id="interest" name="interest" required>
 <option value="" data-i18n="form_select">Select a service...</option>
-<option value="Workflow Automation" data-i18n="form_opt1">Workflow Automation</option>
-<option value="Sales Intelligence" data-i18n="form_opt2">Sales Intelligence</option>
-<option value="AI Agents & Chatbots" data-i18n="form_opt3">AI Agents & Chatbots</option>
-<option value="Data Strategy" data-i18n="form_opt4">Data Strategy & Analytics</option>
-<option value="Systems Integration" data-i18n="form_opt5">Systems Integration</option>
-<option value="AI Strategy & Training" data-i18n="form_opt6">AI Strategy & Training</option>
-<option value="Not sure yet" data-i18n="form_opt7">Not sure yet</option>
+<option value="AI Strategy" data-i18n="form_opt1">AI Strategy & Roadmap</option>
+<option value="AI Training" data-i18n="form_opt2">AI Leadership & Training</option>
+<option value="Workflow Automation" data-i18n="form_opt3">Workflow Automation</option>
+<option value="AI Agents & Chatbots" data-i18n="form_opt4">AI Agents & Chatbots</option>
+<option value="Data Analytics" data-i18n="form_opt5">Data Strategy & Analytics</option>
+<option value="Not sure yet" data-i18n="form_opt6">Not sure yet — need guidance</option>
 </select>
 </div>
 </div>
 <div class="form-group">
 <label for="message" data-i18n="form_message">Message</label>
-<textarea id="message" name="message" rows="4" data-i18n-ph="form_message_ph" placeholder="Tell us about your project or challenge..."></textarea>
+<textarea id="message" name="message" rows="4" data-i18n-ph="form_message_ph" placeholder="Tell us about your business challenge or what you'd like AI to help with..."></textarea>
 </div>
 <button type="submit" class="btn btn-primary form-submit" data-i18n="form_submit">Send Message</button>
 <div id="formStatus" class="form-status"></div>
@@ -613,18 +632,45 @@ section{padding:72px 0 !important}
 <!-- FOOTER -->
 <footer>
 <div class="container">
-<div class="footer-inner">
-<div class="footer-logo">Bart<span>AI</span></div>
-<ul class="footer-links">
-<li><a href="#services" data-i18n="nav_services">Services</a></li>
-<li><a href="#industries" data-i18n="nav_industries">Industries</a></li>
-<li><a href="#process" data-i18n="nav_process">Process</a></li>
+<div class="footer-grid">
+<div class="footer-about">
+<a href="#" class="logo">Bart<span>AI</span></a>
+<p data-i18n="footer_about">Monaco's AI strategy and implementation partner. We help growing businesses unlock the power of artificial intelligence — with real results in weeks.</p>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_company">Company</h4>
+<ul>
 <li><a href="#about" data-i18n="nav_about">About</a></li>
+<li><a href="#services" data-i18n="nav_services">Services</a></li>
 <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
 </ul>
 </div>
+<div class="footer-col">
+<h4 data-i18n="footer_services">Services</h4>
+<ul>
+<li><a href="#services" data-i18n="svc1_label">AI Strategy</a></li>
+<li><a href="#services" data-i18n="svc2_label">AI Leadership & Training</a></li>
+<li><a href="#services" data-i18n="svc3_label">AI Engineering & Automation</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 data-i18n="footer_industries">Industries</h4>
+<ul>
+<li><a href="#industries">Retail & E-commerce</a></li>
+<li><a href="#industries">Real Estate</a></li>
+<li><a href="#industries">Professional Services</a></li>
+<li><a href="#industries">Hospitality & Tourism</a></li>
+<li><a href="#industries">Construction</a></li>
+</ul>
+</div>
+</div>
 <div class="footer-bottom">
-<p>&copy; 2024 BartAI. Monaco. <span data-i18n="footer_rights">All rights reserved.</span> <a href="#" style="color:var(--accent);margin-left:8px" data-i18n="footer_privacy">Privacy Policy</a></p>
+<p>&copy; 2024 BartAI. Monaco. <span data-i18n="footer_rights">All rights reserved.</span></p>
+<div class="social-links">
+<a href="#" aria-label="LinkedIn"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+<a href="#" aria-label="X / Twitter"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+<a href="#" aria-label="Instagram"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+</div>
 </div>
 </div>
 </footer>
@@ -633,124 +679,76 @@ section{padding:72px 0 !important}
 /* ============ TRANSLATIONS ============ */
 const translations = {
 fr: {
-nav_services: "Services",
-nav_industries: "Secteurs",
-nav_process: "Processus",
-nav_results: "R\u00e9sultats",
-nav_about: "\u00c0 propos",
-nav_contact: "Contact",
-nav_cta: "Prendre rendez-vous",
-hero_badge: "Conseil en IA \u00e0 Monaco",
-hero_title: "L'IA qui fait grandir <span class=\"highlight\">votre entreprise</span>",
-hero_text: "Pas de budgets pharaoniques. Pas de d\u00e9lais interminables. Nous livrons des solutions IA sur mesure qui r\u00e9duisent vos co\u00fbts et boostent votre croissance \u2014 r\u00e9sultats en quelques semaines.",
-hero_cta1: "Appel d\u00e9couverte gratuit",
-hero_cta2: "Notre m\u00e9thode",
-why_label: "Pourquoi l'IA pour votre entreprise",
-why_title: "L'IA n'est plus r\u00e9serv\u00e9e aux grandes entreprises",
-why_subtitle: "Les PME de Monaco et de la Riviera utilisent l'IA pour travailler plus intelligemment et grandir sans limites.",
-why1_title: "R\u00e9duisez co\u00fbts et temps",
-why1_text: "Automatisez les t\u00e2ches r\u00e9p\u00e9titives \u2014 facturation, planification, saisie de donn\u00e9es \u2014 pour que votre \u00e9quipe se concentre sur la croissance.",
-why2_title: "Rivalisez avec les grands",
-why2_text: "L'IA \u00e9galise les chances. Acc\u00e9dez aux m\u00eames analyses et automatisations que les grandes entreprises, \u00e0 une fraction du co\u00fbt.",
-why3_title: "Grandissez sans recruter",
-why3_text: "G\u00e9rez 10x plus de clients et commandes sans agrandir votre \u00e9quipe. Les agents IA travaillent 24h/24, 7j/7.",
-why4_title: "D\u00e9cidez mieux",
-why4_text: "Transformez vos donn\u00e9es en informations claires et exploitables. Arr\u00eatez de deviner, commencez \u00e0 savoir.",
-proof1: "Heures \u00e9conomis\u00e9es/mois",
-proof2: "ROI moyen",
-proof3: "D\u00e9lai de livraison",
-proof4: "Solutions sur mesure",
-svc_label: "Nos services",
-svc_title: "Des solutions IA con\u00e7ues pour des r\u00e9sultats concrets",
-svc_subtitle: "De l'automatisation de vos processus \u00e0 la cr\u00e9ation d'agents intelligents, nous livrons une IA qui fait la diff\u00e9rence.",
-svc1_title: "Automatisation des processus",
-svc1_text: "\u00c9liminez les goulots d'\u00e9tranglement manuels. Nous cartographions vos processus et construisons des automatisations IA qui vous font gagner des heures chaque semaine.",
-svc2_title: "Intelligence commerciale",
-svc2_text: "Convertissez plus de prospects en clients. Scoring IA, prospection personnalis\u00e9e et int\u00e9gration CRM intelligente.",
-svc3_title: "Agents IA & Chatbots",
-svc3_text: "D\u00e9ployez des agents conversationnels intelligents qui r\u00e9pondent aux clients, prennent des rendez-vous et qualifient les leads \u2014 24h/24, en plusieurs langues.",
-svc4_title: "Strat\u00e9gie data & Analytics",
-svc4_text: "Donnez du sens \u00e0 vos donn\u00e9es. Tableaux de bord, mod\u00e8les pr\u00e9dictifs et syst\u00e8mes analytiques pour des d\u00e9cisions \u00e9clair\u00e9es.",
-svc5_title: "Int\u00e9gration syst\u00e8mes",
-svc5_text: "Connectez vos outils existants avec l'IA. CRM, ERP, e-commerce \u2014 nous faisons tout communiquer parfaitement.",
-svc6_title: "Strat\u00e9gie IA & Formation",
-svc6_text: "Vous ne savez pas par o\u00f9 commencer ? Nous \u00e9valuons votre entreprise, identifions les opportunit\u00e9s IA \u00e0 fort impact et formons votre \u00e9quipe.",
-ind_label: "Secteurs d'activit\u00e9",
-ind_title: "Des solutions IA pour chaque entreprise en croissance",
-ind_subtitle: "Nous travaillons avec les PME de Monaco et de la Riviera, en r\u00e9solvant des probl\u00e8mes concrets dans les secteurs o\u00f9 l'IA a le plus d'impact.",
-ind1_title: "Commerce & E-commerce",
-ind1_text: "Automatisez l'inventaire, personnalisez les recommandations et r\u00e9cup\u00e9rez les paniers abandonn\u00e9s gr\u00e2ce \u00e0 l'IA.",
-ind2_title: "Immobilier",
-ind2_text: "Qualifiez les leads instantan\u00e9ment, automatisez le matching immobilier et g\u00e9n\u00e9rez du home staging virtuel.",
-ind3_title: "Services professionnels",
-ind3_text: "Automatisez les propositions, simplifiez l'onboarding client et g\u00e9rez la facturation avec l'IA.",
-ind4_title: "Industrie & Logistique",
-ind4_text: "Pr\u00e9diction de la demande, optimisation des itin\u00e9raires, r\u00e9duction des d\u00e9chets et contr\u00f4le qualit\u00e9 intelligent.",
-ind5_title: "Construction",
-ind5_text: "Estimation IA des projets, planification des ressources et suivi de chantier pour rester dans les d\u00e9lais et le budget.",
-ind6_title: "H\u00f4tellerie & Tourisme",
-ind6_text: "Concierge IA multilingue, tarification dynamique, gestion automatis\u00e9e des r\u00e9servations et exp\u00e9riences personnalis\u00e9es sur la Riviera.",
-ind7_title: "Marketing & Agences cr\u00e9atives",
-ind7_text: "Automatisez la production de contenu, les tests A/B et l'analyse de campagnes. Livrez plus pour vos clients en moins de temps.",
-proc_label: "Notre m\u00e9thode",
-proc_title: "Du premier appel aux r\u00e9sultats \u2014 rapidement",
-proc_subtitle: "Notre processus en 4 \u00e9tapes est con\u00e7u pour la rapidit\u00e9. La plupart de nos clients PME voient des r\u00e9sultats en 3 semaines.",
-step1_title: "D\u00e9couverte & Audit",
-step1_text: "Nous apprenons votre entreprise, cartographions vos processus et identifions les meilleures opportunit\u00e9s IA.",
-step2_title: "Strat\u00e9gie sur mesure",
-step2_text: "Une feuille de route claire adapt\u00e9e \u00e0 vos objectifs, budget et d\u00e9lais. Pas de solutions toutes faites.",
-step3_title: "Construction & D\u00e9ploiement",
-step3_text: "Nous construisons, testons et lan\u00e7ons vos solutions IA. It\u00e9rations rapides, avec vous \u00e0 chaque \u00e9tape.",
-step4_title: "Optimisation & Croissance",
-step4_text: "Am\u00e9lioration continue bas\u00e9e sur les donn\u00e9es r\u00e9elles. Votre IA grandit avec votre entreprise.",
-res_label: "R\u00e9sultats concrets",
-res_title: "L'impact de l'IA en chiffres",
-res_subtitle: "Des r\u00e9sultats mesurables de nos clients PME \u00e0 Monaco et en Europe.",
-res1_label: "T\u00e2ches manuelles \u00e9limin\u00e9es",
-res1_text: "Lib\u00e9rez votre \u00e9quipe des t\u00e2ches r\u00e9p\u00e9titives et redirigez l'effort vers la croissance.",
-res2_label: "Augmentation des conversions",
-res2_text: "Le scoring IA et la prospection personnalis\u00e9e augmentent vos taux de conclusion.",
-res3_label: "Support automatis\u00e9",
-res3_text: "Les agents IA g\u00e8rent les demandes clients 24h/24, dans toutes les langues.",
-about_label: "\u00c0 propos de BartAI",
-about_title: "Votre partenaire IA \u00e0 Monaco",
-about_p1: "BartAI a \u00e9t\u00e9 fond\u00e9e pour apporter une IA pratique et abordable aux entreprises qui en ont le plus besoin \u2014 les PME pr\u00eates \u00e0 grandir plus intelligemment. Bas\u00e9s \u00e0 Monaco, nous comprenons le paysage unique de la communaut\u00e9 d'affaires de la Riviera.",
-about_p2: "Nous ne sommes pas un cabinet de conseil tech impersonnel. Nous sommes concrets, multilingues et obsess\u00e9s par les r\u00e9sultats mesurables \u2014 en semaines, pas en mois.",
-diff1_title: "Con\u00e7u pour les PME, pas les grands groupes",
-diff1_text: "Des solutions \u00e0 la taille de votre entreprise et de votre budget. Pas de complexit\u00e9 inutile.",
-diff2_title: "R\u00e9sultats en semaines, pas en mois",
-diff2_text: "Notre processus agile livre une IA fonctionnelle en 3 semaines. Vous voyez la valeur rapidement.",
-diff3_title: "Bas\u00e9s \u00e0 Monaco & Multilingues",
-diff3_text: "Pr\u00e9sence locale, port\u00e9e europ\u00e9enne. Nous travaillons en anglais, fran\u00e7ais et italien.",
-contact_label: "Contactez-nous",
-contact_title: "Parlons de votre entreprise",
-contact_subtitle: "R\u00e9servez un appel gratuit de 30 minutes. Nous discuterons de vos d\u00e9fis, identifierons des gains rapides et vous montrerons ce que l'IA peut faire \u2014 sans engagement.",
-contact_lang: "Anglais, Fran\u00e7ais & Italien",
-contact_response: "R\u00e9ponse g\u00e9n\u00e9ralement sous 24h",
-contact_gdpr: "Conforme RGPD. Vos donn\u00e9es sont prot\u00e9g\u00e9es.",
-form_name: "Nom *",
-form_name_ph: "Votre nom",
-form_email: "Email *",
-form_email_ph: "vous@entreprise.com",
-form_company: "Entreprise",
-form_company_ph: "Votre entreprise",
-form_interest: "Je suis int\u00e9ress\u00e9(e) par *",
-form_select: "S\u00e9lectionnez un service...",
-form_opt1: "Automatisation des processus",
-form_opt2: "Intelligence commerciale",
-form_opt3: "Agents IA & Chatbots",
-form_opt4: "Strat\u00e9gie data & Analytics",
-form_opt5: "Int\u00e9gration syst\u00e8mes",
-form_opt6: "Strat\u00e9gie IA & Formation",
-form_opt7: "Pas encore s\u00fbr(e)",
-form_message: "Message",
-form_message_ph: "Parlez-nous de votre projet ou d\u00e9fi...",
-form_submit: "Envoyer le message",
-footer_rights: "Tous droits r\u00e9serv\u00e9s.",
-footer_privacy: "Politique de confidentialit\u00e9",
-form_sending: "Envoi en cours...",
-form_success: "Message envoy\u00e9 ! Nous vous r\u00e9pondrons sous 24h.",
-form_error: "Erreur d'envoi. Veuillez r\u00e9essayer ou \u00e9crire \u00e0 renato@mcbart.com."
+nav_services:"Services",nav_industries:"Secteurs",nav_faq:"FAQ",nav_about:"\u00c0 propos",nav_contact:"Contact",
+nav_cta:"Parler \u00e0 un strat\u00e8ge IA",
+hero_label:"Conseil en IA \u00e0 Monaco",
+hero_title:"De la confusion IA \u00e0 la <em>confiance IA</em>",
+hero_text:"Nous aidons les entreprises en croissance \u00e0 Monaco et sur la Riviera \u00e0 identifier les meilleures opportunit\u00e9s IA, les mettre en \u0153uvre efficacement et obtenir des r\u00e9sultats concrets \u2014 en semaines, pas en mois.",
+hero_cta1:"Parler \u00e0 un strat\u00e8ge IA",hero_cta2:"D\u00e9couvrir nos services",
+partners_label:"Propuls\u00e9 par les meilleures plateformes IA",
+val_label:"Votre partenaire strat\u00e9gie IA",
+val_title:"Lib\u00e9rez tout le potentiel de l'intelligence artificielle",
+val_subtitle:"En tant que partenaire strat\u00e9gie et impl\u00e9mentation IA \u00e0 Monaco, nous d\u00e9livrons des r\u00e9sultats mesurables sur trois piliers.",
+val1_title:"G\u00e9n\u00e9rer du chiffre d'affaires",val1_text:"Acc\u00e9l\u00e9rez votre croissance gr\u00e2ce \u00e0 l'automatisation IA et aux analyses pr\u00e9dictives qui ouvrent de nouvelles opportunit\u00e9s.",
+val2_title:"Augmenter la rentabilit\u00e9",val2_text:"Optimisez vos op\u00e9rations et \u00e9liminez les inefficacit\u00e9s pour am\u00e9liorer vos marges \u2014 sans gonfler vos effectifs.",
+val3_title:"\u00c9lever votre \u00e9quipe",val3_text:"Supprimez les t\u00e2ches r\u00e9p\u00e9titives et permettez \u00e0 votre \u00e9quipe de se concentrer sur le travail \u00e0 forte valeur ajout\u00e9e.",
+enable_label:"Accompagnement strat\u00e9gique IA",
+enable_title:"Pr\u00e9parez votre \u00e9quipe \u00e0 r\u00e9ussir avec l'IA",
+enable_subtitle:"La plupart des entreprises savent qu'elles ont besoin de l'IA \u2014 mais ne savent pas par o\u00f9 commencer. Nous vous guidons de l'incertitude aux r\u00e9sultats mesurables.",
+en1_title:"Trouver le plus fort impact",en1_text:"Nous analysons d\u00e9partement par d\u00e9partement pour identifier et impl\u00e9menter les workflows IA qui g\u00e9n\u00e8rent un vrai ROI.",
+en2_title:"Optimiser vos outils",en2_text:"Nous vous aidons \u00e0 s\u00e9lectionner et configurer les outils IA qui s'alignent avec votre stack technique et vos objectifs.",
+en3_title:"Transformer la culture",en3_text:"Nous formons votre \u00e9quipe \u00e0 utiliser l'IA efficacement \u2014 quand s'y fier et quand mener sans elle.",
+svc_label:"Nos services IA \u00e0 Monaco",
+svc_title:"Strat\u00e9gie. Impl\u00e9mentation. R\u00e9sultats.",
+svc_subtitle:"Nous ne faisons pas que conseiller \u2014 nous construisons, d\u00e9ployons et optimisons des solutions IA qui d\u00e9livrent des r\u00e9sultats mesurables.",
+svc1_label:"Strat\u00e9gie IA",svc1_title:"De l'incertitude \u00e0 une feuille de route IA claire",
+svc1_text:"Nous auditons vos op\u00e9rations, identifions les opportunit\u00e9s \u00e0 fort impact et livrons une feuille de route claire adapt\u00e9e \u00e0 vos objectifs, budget et d\u00e9lais.",
+svc1_cta:"Obtenir votre strat\u00e9gie IA",
+svc2_label:"Leadership & Formation IA",svc2_title:"Transformez votre \u00e9quipe en ambassadeurs de l'IA",
+svc2_text:"Vous pouvez investir dans les meilleurs outils IA et n'obtenir aucun ROI si vos \u00e9quipes ne sont pas pr\u00eates. Nous formons dirigeants et \u00e9quipes \u00e0 travers des ateliers pratiques.",
+svc2_cta:"Former votre \u00e9quipe",
+svc3_label:"Ing\u00e9nierie IA & Automatisation",svc3_title:"Agents IA, chatbots & automatisation sur mesure",
+svc3_text:"Nous combinons outils existants, automatisation intelligente et agents IA personnalis\u00e9s pour r\u00e9soudre vos probl\u00e8mes m\u00e9tier et g\u00e9n\u00e9rer du ROI.",
+svc3_cta:"Automatiser votre entreprise",
+ind_label:"Secteurs d'activit\u00e9 \u00e0 Monaco & la Riviera",
+ind_title:"Des solutions IA pour chaque entreprise en croissance",
+ind_subtitle:"Nous ciblons les secteurs o\u00f9 l'intelligence artificielle d\u00e9livre l'impact le plus rapide et mesurable pour les PME.",
+ind1_title:"Commerce & E-commerce",ind1_text:"Automatisez l'inventaire, personnalisez les recommandations et r\u00e9cup\u00e9rez les paniers abandonn\u00e9s.",
+ind2_title:"Immobilier",ind2_text:"Qualifiez les leads instantan\u00e9ment, automatisez le matching immobilier et g\u00e9n\u00e9rez du home staging virtuel sur la Riviera.",
+ind3_title:"Services professionnels",ind3_text:"Automatisez les propositions, simplifiez l'onboarding client et g\u00e9rez facturation et contrats avec l'IA.",
+ind4_title:"Industrie & Logistique",ind4_text:"Pr\u00e9vision de la demande, optimisation des itin\u00e9raires, r\u00e9duction des d\u00e9chets et contr\u00f4le qualit\u00e9.",
+ind5_title:"Construction",ind5_text:"Estimation IA des projets, planification des ressources et suivi de chantier pour respecter d\u00e9lais et budget.",
+ind6_title:"H\u00f4tellerie & Tourisme",ind6_text:"Concierge IA multilingue, tarification dynamique, gestion des r\u00e9servations et exp\u00e9riences personnalis\u00e9es.",
+ind7_title:"Marketing & Agences cr\u00e9atives",ind7_text:"Automatisez la production de contenu, les tests A/B et l'analyse de campagnes.",
+test_label:"T\u00e9moignages clients",
+test_quote:"\u00abBartAI a transform\u00e9 notre fa\u00e7on de travailler. En trois semaines, ils ont automatis\u00e9 notre processus d'onboarding client et d\u00e9ploy\u00e9 un chatbot IA qui g\u00e8re 80% des demandes. Le ROI a \u00e9t\u00e9 imm\u00e9diat.\u00bb",
+test_author:"Directeur G\u00e9n\u00e9ral",test_company:"Cabinet de services professionnels, Monaco",
+faq_label:"Questions fr\u00e9quentes",faq_title:"Questions courantes, r\u00e9ponses directes",
+faq_subtitle:"Pas de jargon. Des r\u00e9ponses claires aux questions que se posent les dirigeants \u00e0 Monaco sur l'IA.",
+faq1_q:"Que fait concr\u00e8tement BartAI ?",faq1_a:"Nous sommes un cabinet de conseil en IA bas\u00e9 \u00e0 Monaco. Nous aidons les PME \u00e0 impl\u00e9menter la strat\u00e9gie IA, l'automatisation des processus et les agents intelligents pour g\u00e9n\u00e9rer du revenu et r\u00e9duire les co\u00fbts.",
+faq2_q:"Combien co\u00fbte le conseil en IA ?",faq2_a:"Chaque mission est adapt\u00e9e \u00e0 la taille et aux objectifs de votre entreprise. Nous proposons un appel d\u00e9couverte gratuit pour \u00e9valuer vos besoins avec une tarification transparente. La plupart des projets PME d\u00e9livrent du ROI en 3 semaines.",
+faq3_q:"Pourquoi ne pas faire l'IA en interne ?",faq3_a:"Selon le MIT, plus de 90% des initiatives IA \u00e9chouent car les \u00e9quipes internes manquent de temps ou d'exp\u00e9rience sp\u00e9cialis\u00e9e. Les entreprises qui font appel \u00e0 un partenaire IA d\u00e9di\u00e9 ont 3x plus de chances de r\u00e9ussir.",
+faq4_q:"Pouvez-vous travailler avec nos outils actuels ?",faq4_a:"Absolument. Nous commen\u00e7ons par une analyse approfondie de votre stack technique et de vos processus, puis identifions o\u00f9 l'IA peut s'int\u00e9grer \u2014 automatisation simple ou agents personnalis\u00e9s connectant vos outils existants.",
+faq5_q:"Quels secteurs servez-vous ?",faq5_a:"Commerce, immobilier, services professionnels, industrie, construction, h\u00f4tellerie et agences marketing \u2014 les secteurs o\u00f9 l'IA d\u00e9livre l'impact le plus rapide pour les entreprises de la Riviera.",
+faq6_q:"En combien de temps voit-on des r\u00e9sultats ?",faq6_a:"La plupart de nos clients voient des r\u00e9sultats mesurables en 3 semaines. Notre processus agile se concentre d'abord sur les gains rapides, puis nous d\u00e9veloppons ce qui fonctionne.",
+cta_label:"\u00c0 propos de BartAI",cta_title:"Votre partenaire strat\u00e9gie & impl\u00e9mentation IA \u00e0 Monaco",
+cta_text:"Nous ne sommes pas un cabinet tech impersonnel. Nous sommes concrets, multilingues et obsess\u00e9s par les r\u00e9sultats mesurables pour les entreprises de Monaco et de la Riviera. Moins de buzz IA. Plus d'ex\u00e9cution. Un vrai impact.",
+cta_btn:"R\u00e9server un appel d\u00e9couverte gratuit",
+contact_label:"Contactez-nous",contact_title:"Parlons de l'IA pour votre entreprise",
+contact_subtitle:"R\u00e9servez un appel d\u00e9couverte gratuit de 30 minutes. Nous discuterons de vos d\u00e9fis et vous montrerons exactement ce que l'IA peut faire \u2014 sans engagement.",
+contact_loc:"Monaco, C\u00f4te d'Azur",contact_lang:"Anglais, Fran\u00e7ais & Italien",
+contact_response:"R\u00e9ponse g\u00e9n\u00e9ralement sous 24h",contact_gdpr:"Conforme RGPD. Vos donn\u00e9es sont prot\u00e9g\u00e9es.",
+form_name:"Nom *",form_name_ph:"Votre nom",form_email:"Email *",form_email_ph:"vous@entreprise.com",
+form_company:"Entreprise",form_company_ph:"Votre entreprise",form_interest:"Je suis int\u00e9ress\u00e9(e) par *",
+form_select:"S\u00e9lectionnez un service...",form_opt1:"Strat\u00e9gie IA & Feuille de route",form_opt2:"Leadership & Formation IA",
+form_opt3:"Automatisation des processus",form_opt4:"Agents IA & Chatbots",form_opt5:"Strat\u00e9gie data & Analytics",
+form_opt6:"Pas encore s\u00fbr(e) \u2014 besoin de conseil",form_message:"Message",
+form_message_ph:"Parlez-nous de votre d\u00e9fi ou de ce que l'IA pourrait vous apporter...",form_submit:"Envoyer le message",
+footer_about:"Partenaire strat\u00e9gie et impl\u00e9mentation IA \u00e0 Monaco. Nous aidons les entreprises en croissance \u00e0 lib\u00e9rer le potentiel de l'intelligence artificielle \u2014 avec des r\u00e9sultats concrets en semaines.",
+footer_company:"Entreprise",footer_services:"Services",footer_industries:"Secteurs",footer_rights:"Tous droits r\u00e9serv\u00e9s.",
+form_sending:"Envoi en cours...",
+form_success:"Message envoy\u00e9 ! Nous vous r\u00e9pondrons sous 24h.",
+form_error:"Erreur d'envoi. Veuillez r\u00e9essayer ou \u00e9crire \u00e0 renato@mcbart.com."
 }
 };
 
@@ -797,9 +795,8 @@ btn.addEventListener('click', () => setLang(btn.dataset.lang));
 });
 
 /* ============ NAVBAR ============ */
-const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-navbar.classList.toggle('scrolled', window.scrollY > 40);
+document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
 /* ============ MOBILE MENU ============ */
@@ -812,59 +809,22 @@ mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => 
 const observer = new IntersectionObserver((entries) => {
 entries.forEach((entry, i) => {
 if (entry.isIntersecting) {
-setTimeout(() => entry.target.classList.add('visible'), i * 80);
+setTimeout(() => entry.target.classList.add('visible'), i * 60);
 observer.unobserve(entry.target);
 }
 });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-/* ============ COUNTER ANIMATION ============ */
-let counterDone = false;
-const counterObserver = new IntersectionObserver((entries) => {
-if (entries[0].isIntersecting && !counterDone) {
-counterDone = true;
-document.querySelectorAll('.number[data-count]').forEach(el => {
-const target = parseInt(el.dataset.count);
-const suffix = el.dataset.suffix || '+';
-const duration = 2000;
-const start = performance.now();
-function tick(now) {
-const progress = Math.min((now - start) / duration, 1);
-const eased = 1 - Math.pow(1 - progress, 3);
-const current = Math.round(target * eased);
-el.textContent = current + (progress >= 1 ? suffix : '');
-if (progress < 1) requestAnimationFrame(tick);
-}
-requestAnimationFrame(tick);
+/* ============ FAQ ACCORDION ============ */
+document.querySelectorAll('.faq-q').forEach(btn => {
+btn.addEventListener('click', () => {
+const wasOpen = btn.classList.contains('open');
+document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); b.nextElementSibling.classList.remove('open'); });
+if (!wasOpen) { btn.classList.add('open'); btn.nextElementSibling.classList.add('open'); }
 });
-}
-}, { threshold: 0.3 });
-
-const proofBar = document.querySelector('.proof-bar');
-if (proofBar) counterObserver.observe(proofBar);
-
-/* ============ PROCESS LINE ANIMATION ============ */
-const processSection = document.querySelector('.process-steps');
-if (processSection) {
-const lineObserver = new IntersectionObserver((entries) => {
-if (entries[0].isIntersecting) {
-let progress = 0;
-const steps = processSection.querySelectorAll('.step');
-const interval = setInterval(() => {
-progress += 2;
-processSection.style.setProperty('--line-progress', Math.min(progress, 100) + '%');
-steps.forEach((step, i) => {
-if (progress >= (i / (steps.length - 1)) * 100) step.classList.add('active');
 });
-if (progress >= 100) clearInterval(interval);
-}, 30);
-lineObserver.unobserve(processSection);
-}
-}, { threshold: 0.2 });
-lineObserver.observe(processSection);
-}
 
 /* ============ CONTACT FORM ============ */
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
@@ -881,7 +841,7 @@ btn.disabled = true;
 try {
 const res = await fetch('https://api.web3forms.com/submit', {
 method: 'POST',
-headers: { 'Content-Type': 'application/json' },
+headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
 body: JSON.stringify(Object.fromEntries(new FormData(this)))
 });
 const data = await res.json();
@@ -890,9 +850,9 @@ status.className = 'form-status success';
 status.textContent = t.form_success;
 this.reset();
 } else {
-throw new Error();
+throw new Error(data.message);
 }
-} catch {
+} catch(err) {
 status.className = 'form-status error';
 status.textContent = t.form_error;
 }
